@@ -1,0 +1,687 @@
+/**
+ * 1.3 Elements
+ * -------------------------------------------------------------------
+ */
+
+.e-wrapper {
+    margin-bottom: 60px;
+    @include max-width(639px) {
+        margin-bottom: 30px;
+    }
+}
+.e-title {
+    font: 700 35px/45px $font1;
+    color: $color-heading;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 30px;
+    > span{
+        background: #fff;
+        padding: 0 5px 0 0;
+        position: relative;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #e8e8e8;
+    }
+}
+.e-heading{
+    p{
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*----- Block Quotes -----*/
+.e-blockquote {
+    blockquote {
+        margin-right: 60px;
+        @include max-width(639px) {
+            margin-right: 0;
+        }
+    }  
+}
+.b-line{
+    @include text_format(arial, 14px, 22px, #8e8e8e);
+    margin-top: 10px;
+    span{
+        &:first-child{
+            width: 20px;
+            height: 1px;
+            background: #888;
+            display: block;
+            float: left;
+            margin: 11px 12px 0 0;
+        }
+    }
+}
+blockquote {
+    background: url("images/background/bq.png") right bottom no-repeat;
+    color: #292929;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 0;
+    border: 1px solid #e8e8e8;
+    position: relative;
+    margin: 30px 0;
+    &:before {
+        content: '';
+        width: 4px;
+        height: 100%;
+        background: $color;
+        position: absolute;
+        top: 0;
+        left: -1px;
+    }
+    &.style-2{
+        border: none;
+        background: none;
+    }
+}
+
+
+/*----- Text style -----*/
+
+.txt-highlight {
+    background: $color;
+    color: #fff;
+}
+
+.txt-highlight-2 {
+    background: #292929;
+    color: #fff;
+}
+
+.txt-decoration {
+    color: $color;
+    text-decoration: underline;
+}
+
+.txt-decoration-2 {
+    color: #292929;
+    text-decoration: underline;
+}
+
+
+/*----- dropcap -----*/
+
+.kopa-dropcap {
+    color: #fff;
+    background: $color-hover;
+    display: inline-block;
+    zoom: 1;
+    float: left;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 41px;
+    margin: 5px 10px 0 0;
+    text-align: center;
+    padding: 6px 12px;
+}
+
+.kopa-dropcap.dc2 {
+    color: #292929;
+    background: none;
+    line-height: 36px;
+    margin: 5px 10px 0 0;
+    text-align: center;
+    padding: 0px 6px;
+}
+
+.kopa-dropcap.dc3 {
+    background: #292929;
+    color: #fff;
+}
+
+
+/*----- Kopa Accordion -----*/
+
+.e-accordion .row {
+    @include min-width(1024px) {
+        >div:first-child {
+            padding-right: 45px;
+        }
+        >div:last-child {
+            padding-left: 45px;
+        }
+    }
+}
+
+.kopa-accordion {    
+    .panel {
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        margin-bottom: 17px;
+        box-shadow: none;
+        .panel-heading { 
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            &.active > .panel-title a {
+                color: $color;
+                i {
+                    border-color: $color;                                
+                    @include a1-hover;
+                }
+                i:before {
+                    content: "\f068";  
+                    color: $color1;
+                }            
+            }   
+            > .panel-title {
+                a {
+                    display: block;
+                    font: 500 16px/30px $font2;
+                    color: #fff;
+                    border: none;                        
+                    background-color: transparent;
+                    text-transform: none;
+                    position: relative;
+                    padding: 10px 0;
+                    &:hover {
+                        color: $color;
+                        i {
+                            border-color: $color;                                
+                            @include a1-hover;
+                            &:before {
+                                color: $color1;
+                            }
+                        }
+                    }
+                    i {
+                        @extend %transition;
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 2px solid #646464;
+                        top: 10px;
+                        right: 0;
+                        text-align: center;
+                        &:before {
+                            @extend %transition;
+                            position: absolute;
+                            @extend %fa;
+                            line-height: 28px;
+                            color: #646464;
+                            content: "\f067"; 
+                            width: 100%;   
+                            top: 0;
+                            left: 0;                                
+                        }
+                    }
+                }
+            }
+        }
+        .panel-body {
+            border: none!important;
+            font: italic 14px/20px $font2;
+            color: #fff;
+            padding: 20px 0 0;
+        }
+    } 
+}
+
+.kopa-accordion.style-1 {
+    .panel {            
+        .panel-heading {
+            border-bottom: 1px solid #e8e8e8;
+            &.active {
+                > .panel-title {
+                    a {
+                        color: $color;                            
+                        i {
+                            border-color: $color;
+                            &:before {
+                                color: $color;                                
+                            }
+                        }                        
+                    }                     
+                }                  
+            }                
+            > .panel-title {
+                a {
+                    color: $color3;
+                    &:hover {
+                        color: $color;
+                    }
+                }                   
+           }
+        } 
+        .panel-body {
+            color: #8e8e8e;
+        }
+    }
+}
+
+.kopa-accordion.style-2 {
+    .panel {            
+        .panel-heading {            
+            > .panel-title {
+                a {
+                    color: #808080;
+                    background-color: $color2;
+                    padding-left: 65px;
+                    &:hover {
+                        color: #fff;                        
+                    }
+                    i {                        
+                        width: 50px;
+                        height: 50px;
+                        right: auto;
+                        top: 0px;
+                        left: 0px;
+                        text-align: center;
+                        border-radius: 0;
+                        border: none;
+                        background-color: $color;
+                        &:before {
+                            line-height: 50px;
+                            color: #646464;                            
+                            width: 100%;   
+                            top: 0;
+                            left: 0;   
+                            color: #fff;                             
+                        }
+                    }
+                }                   
+            }
+            &.active {
+                > .panel-title a {                    
+                    color: #fff; 
+                }                  
+            }                
+            
+        } 
+        .panel-body {
+            color: #8e8e8e;
+        }
+    }
+}
+
+
+/*----- kopa button -----*/
+
+.button-des{
+    background: $bg2;
+    padding: 20px;
+    border-radius: 5px;
+}
+.button-wrap{
+    @extend %clearfix;
+    margin: 0 -6px;
+}
+.kopa-button-1 {
+    float: left;    
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.small-button {
+        margin-top: 26px;
+}
+.medium-button {
+        margin-top: 16px;
+}
+
+.kopa-button-1 {
+    @extend %transition;
+    padding: 7px 25px;
+    color: #fff;
+    background: $color-hover;
+    font-size: 15px;
+    span{
+        @extend %transition;
+    }
+}
+.small-button {
+    padding: 7px 25px;
+}
+.medium-button {
+    padding: 12px 30px;
+}
+.big-button {
+    padding: 20px 40px;
+}
+.color-button, .border-button:hover {
+    color: #fff;
+    background: $color-hover;
+    border: 1px solid $color-hover;
+}
+.border-button, .color-button:hover {
+    background: #fff;
+    border: 1px solid $color-hover;
+    color: $color-hover;
+}
+.span-button{
+    background: #fff;
+    border: 2px solid $color-hover;
+    padding: 1px;
+
+    span{
+        background: $color-hover;
+        display: block;
+    }
+    &.small-button{
+        > span{
+                padding: 5px 24px;
+        }
+    }
+    &.medium-button{
+        > span{
+                padding: 10px 27px;
+        }
+    }
+    &.big-button{
+        > span{
+                padding: 18px 37px;
+        }
+    }
+    &:hover{
+         span{
+                background: #fff;
+            }
+    }
+}   
+.black-button{
+    background: $color;
+    &.span-button{
+        background: #fff;
+        border-color: $color;
+        span{
+            background: $color;
+        }
+        &:hover{
+            span{
+                background: #fff;
+                color: $color;
+            }
+        }
+    }
+    &.color-button, &.border-button:hover {
+        color: #fff;
+        background: $color;
+        border: 1px solid $color;
+    }
+    &.border-button, &.color-button:hover {
+        background: #fff;
+        border-color: $color;
+        color: $color;
+    }
+}
+
+.button-wrap{
+    @extend %clearfix;
+    margin-top: 15px;
+    &:first-child{
+        margin-top: 0;
+    }
+    &.style2{
+        margin-top: 50px;
+    }
+}
+
+.kopa-button {
+    @extend %transition;
+    display: block;
+    height: 46px;
+    font: 500 15px/46px $font2;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.kopa-button {
+    &.s1 {
+        border: 1px solid #171717;
+        background-color: #171717;
+        &:hover { 
+            background-color: rgba(23, 23, 23, 0.5);      
+        }  
+    }
+    &.s2 {
+        border: 1px solid #171717;
+        background-color: rgba(23, 23, 23, 0.5);        
+        &:hover {
+            background-color: #171717;        
+        }
+    }
+}
+
+.sm-button {
+    height: 30px;
+    line-height: 28px;
+}
+
+.md-button {
+    height: 46px;
+    line-height: 46px;
+}
+
+.button-3 {
+    display: inline-block;
+    padding: 0 15px;
+    background-color: $color;
+    border: 1px solid $color;
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+
+/*----- Alert Box -----*/
+
+.kopa-alert{
+    margin-top: 20px;
+}
+.kopa-alert{
+    padding: 10px 35px 10px 17px;
+    color: #fff;
+    position: relative;
+    border: none;
+}
+.kopa-alert .close {
+    opacity: 0.8;
+    top: 0px;
+    right: -18px;
+    outline: none;
+}
+.kopa-alert.alert-warning {
+    background: #ffc619;
+}
+.kopa-alert.alert-info {
+    background: #4fc7ed;
+}
+.kopa-alert.alert-1 {
+    background: $color1;
+}
+.kopa-alert.alert-2 {
+    background: $color2;
+}
+
+
+/*----- Pricing Table -----*/
+
+.kopa-pricing-tab {
+    @include between-width(768px, 979px) {
+        .col-sm-4 {
+            width: 50%;
+            &:nth-child(odd) {
+                padding-left: 105px;
+            }
+            &:nth-child(even) {
+                padding-right: 105px;
+            }
+        }
+    }
+}
+.e-pricing-tab .e-wrapper {
+    margin-bottom: 60px;
+}
+.column {
+    margin-bottom: 40px;
+    text-align: center;
+    @include max-width(639px){
+        margin-bottom: 20px;
+    }
+    ul {
+        @extend %list_reset;
+    } 
+    .title-row {
+        font: bold 18px/30px $font2;
+        color: #292929;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        border: 1px solid #494949;
+        border-bottom: none;
+    }
+    .pricing-row {
+        background-color: rgba(124, 124, 124, .3);
+        border-left: 1px solid #494949;
+        border-right: 1px solid #494949;
+        border-top: 1px solid #b4b4b4;
+        border-bottom: 1px solid #b4b4b4;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        p {
+            font: 600 45px/50px $font2;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        span {
+            font: 600 13px/15px $font2;
+            color: #fff;
+        }
+    }
+    ul {
+        border: 1px solid #494949;
+        border-top: none;
+        padding: 22px 0;
+        .normal-row {
+            font: 14px/20px $font2;
+            padding: 10px 10px;
+            color: #292929;
+        }
+    }       
+    .footer-row {        
+        background-color: #292929;
+        a {
+            font: 600 14px/20px $font2;
+            color: #fff;
+            text-transform: uppercase;
+            display: block;
+            padding: 18px 10px;
+            &:hover {
+                background-color: $color;
+            }
+        }   
+    }
+    &.style-2 {
+        .pricing-row {
+            background-color: $color;
+            border: 1px solid $color;
+        }
+        .footer-row {
+            background-color: $color;
+        }
+    }
+}
+
+
+/*----- Column -----*/
+
+.e-column .e-title {
+    margin-bottom: 0;
+}
+.c-title {
+    font-family: $font2;
+    color: $color-heading;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase; 
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}  
+.e-column .element-title{
+    margin-bottom: 0;
+}
+
+
+/*----- Progress Bar -----*/
+
+.progress {
+    height: 30px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    .progress-bar {
+        @extend %transition;
+        background-color: #000;
+        padding: 5px 15px;
+        text-align: left;
+        &:hover {
+            background-color: $color;
+        }
+        span {
+            font: 300 13px/20px $font2;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.nav-tabs {
+	border: none;
+	li {
+		border: 1px solid #ebebeb;
+		padding: 1px;
+		border-left: none;
+		&:first-child {
+			border-left: 1px solid #ebebeb;
+		}
+		a {
+			display: block;
+			font: 400 14px/36px $font2;
+			color: #a0a0a0;
+			padding: 0 14px;
+			border-radius: 0;
+			border: none;
+			margin: 0;
+			&:hover {
+				background-color: #f3f3f3;
+			}
+		}
+		&.active {	
+			border-bottom: 1px solid #fff;
+			a {
+				color: #353535;
+				background-color: #f3f3f3;
+				border: none;
+				&:hover, &:focus {
+					border: none;
+					background-color: #f3f3f3;
+				}
+			}
+			
+		}
+	}
+}
+.tab-content {
+	padding: 25px 15px;
+	border: 1px solid #ebebeb;
+}

@@ -1,0 +1,82 @@
+/*--- kopa-por-des ---*/ 
+
+header.por-style{    
+    position: relative;
+    padding-right: 110px;
+    margin-bottom: 25px;    
+    h2 {
+        font: 600 21px/25px $font2;
+        text-transform: uppercase;
+    }
+    span{
+        position: absolute;
+        top: 3px;
+        right: 0;
+    }
+    .fa {
+        margin-right: 10px;
+    }
+    @include max-width(479px) {
+        padding-right: 0;
+        span {
+            position: relative;
+            top: 0;
+        }
+    }
+}
+
+.kopa-por-des{
+    @extend %list_reset;
+    @include max-width(639px) {
+        &.pt-50 {
+            padding-top: 0;
+        }
+    }
+    .widget-title{
+        margin-bottom: 10px;
+    }
+    footer {
+        p {
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    }
+    @include min-width(1024px) {
+        .col-left-1 {
+            float: left;
+            width: 76.271186%;
+            padding: 0 15px;
+        }
+        .col-right-1 {
+            float: left;
+            width: 23.72881355%;
+            padding: 0 15px;
+        }
+    }
+
+}
+.por-line{
+    margin: 30px 0;
+    border-bottom: 1px solid $border-01;
+}       
+.por-des{
+    margin-bottom: 25px;
+}
+.por-detail{
+    > ul{
+        @extend %list_format;
+        > li{
+            margin-top: 5px;
+        }
+    }
+    .dt-left{
+        width: 100px;
+        float: left;
+        margin: 0 15px 0 0;
+    }
+    .dt-right{
+        overflow: hidden;
+        color: #353535;
+    }
+}

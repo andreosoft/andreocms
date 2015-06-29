@@ -1,0 +1,66 @@
+.owl-blog-carousel-1.owl-theme,.owl-blog-carousel-3{
+	.owl-controls{
+		.owl-pagination{
+			position:absolute;
+			left:0;
+			right:0;
+			margin:0 auto;
+			font-size:0;
+			line-height:0;
+			>div{
+				span{
+					width:10px;
+					height:10px;
+					opacity:1;
+					background:#ffffff;
+					@include circle;
+					margin:0 2px;
+				}
+			}
+			.active{
+				span{
+					background:$color;
+				}
+			}
+		}
+	}	
+}
+.owl-blog-carousel-1.owl-theme{
+	.owl-controls{
+		.owl-pagination{
+			bottom:15px;
+		}
+	}	
+}
+.owl-blog-carousel-3.owl-theme{
+	.owl-controls{
+		.owl-pagination{
+			bottom:30px;
+		}
+	}	
+}
+
+.owl-carousel.owl-blog-carousel-2{
+	.owl-controls.style7{
+        .owl-buttons div {
+            color: #fff; 
+            background: none;
+            width:18px;
+            height:26px;
+            padding:0;
+            margin-top:-13px;
+            line-height:26px;
+            border-radius:0;       
+            &:hover {
+                background: none;     
+            }
+            &.owl-prev {
+                left: 27px;    
+
+            }
+            &.owl-next {
+                right: 27px;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+/*--- kopa related posts style-1 ---*/
+.kopa-related-posts {
+    margin-bottom: 90px;
+    .widget-title {
+        margin-bottom: 35px;
+    }
+    .item {
+        padding: 0 15px;
+        .entry-thumb {
+            border: 1px solid #494949;
+            padding: 14px;
+            margin-bottom: 25px;
+            @include entry-thumb-1(rgba(206, 3, 61, .3));
+        }
+        .entry-thumb-inner {
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+        
+        .entry-content {
+            padding: 0 28px;
+            text-align: center;
+            .entry-title {
+                margin-bottom: 15px;
+                a {
+                    font: 700 16px/20px $font2;
+                    color: $color-heading;
+                    &:hover {
+                        color: $color1;
+                    }
+                }
+            }
+            p {
+                font-style: italic;
+                color: #494949;
+            }
+            .show-more {
+                @extend %transition;
+                display: inline-block;
+                font: 400 11px/30px $font2;
+                color: #fff;
+                text-transform: uppercase;
+                padding: 0 11px 0 15px;
+                background-color: #171717;
+                border: 1px solid #171717;
+                &:hover {
+                    border-color: $color1;
+                    background-color: transparent;
+                    color: $color1;
+                }
+            }
+        }
+        
+    }
+}
+
+
+/*--- kopa related posts style2 ---*/
+.kopa-related-posts.s-left .item{
+    .entry-content {
+        padding: 0;
+        text-align: left;
+        .entry-title {
+            margin-bottom: 10px;
+            a {
+                font: 500 14px/22px $font2;
+                color: #353535;
+                @include a1-hover;
+            }
+        }
+        .entry-meta > span {
+            margin: 0;
+        }
+        .entry-author {
+            color: $color1;
+            a {
+                color: $color1;
+                @include a2-hover;
+            }
+        }
+        p {
+            font-style: normal;
+            color: #8e8e8e;
+        }
+    }
+}

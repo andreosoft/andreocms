@@ -1,0 +1,50 @@
+
+/*--- kopa sync portfolio widget ---*/ 
+
+.kopa-sync-portfolio-widget {
+    margin-bottom: 50px;
+    .sync-row {
+        margin: 10px -5px 0;
+    }
+    .sync4 .item {
+      padding: 0 5px;
+      cursor: pointer;
+    }
+}
+
+.kopa-sync-portfolio-widget.style2 {
+    .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    .lg-thumb-port {
+        float: left;
+        width: 77.58620689%; //900px;
+        padding: 0 5px;
+        margin-bottom: 10px;
+        @include max-width(639px) {
+            width: 100%;
+        }
+    }
+    .sm-thumb-port {
+        float: left;
+        width: 22.4137931%; //260px;
+        padding: 0 5px;
+        @include max-width(639px) {
+            width: 100%;
+        }
+        .item {
+            float: left;
+            width: 50%; //130px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 10px;
+            @include max-width(639px) {
+                width: 25%;
+            }
+            .entry-thumb {
+                @include entry-thumb-3(rgba(206, 3, 61, 0.3));
+            }
+        }
+    }
+}

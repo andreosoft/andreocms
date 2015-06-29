@@ -1,0 +1,193 @@
+/*--- kopa portfolio widget ---*/
+.kopa-portfolio-widget {
+    .element header {
+        padding-left: 34px;
+        @include max-width(1023px) {
+            padding-left: 20px;
+        }
+        .widget-title {
+            font: bold 55px/60px $font1;
+            text-transform: none;
+            color: $color;
+            margin-bottom: 30px;
+            @include max-width(1023px) {
+                font-size: 40px;
+                line-height: 50px;
+                margin-bottom: 10px;
+            }
+            span {
+                color: #fff;
+            }
+        }
+        p {
+            font-size: 14px;
+            line-height: 24px;
+            font-style: italic;
+        }
+    }
+    .portfolio-filter {
+        margin-bottom: 30px;
+        #options {
+            @extend %list_reset;
+            li {                
+                padding-left: 10px;
+                border-left: 1px solid #bbb;
+                margin-left: 10px;
+                float: left;
+                label {
+                    @extend %transition;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    line-height: 15px;
+                    display: block;     
+                    color: #bbb;        
+                    input {
+                        display: none;
+                    }
+                    &:hover {
+                        color: $color-hover2;
+                        cursor: pointer;
+                    }
+                }
+                &:first-child {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                }
+                @include max-width(479px) {
+                    margin-bottom: 10px;
+                    border-left: none;
+                }
+            }
+        }
+    }
+    .masonry-wrapper {
+        position: relative;
+        .element {
+            width: 14.43478260869565%; //166px;
+            list-style: none;
+            float: left;
+            margin: 3px;
+            @include entry-thumb-2(rgba(206, 3, 61, .4));            
+        }
+        .width1 {
+            width: 38.69565217391304%; //445px;
+        }
+        .width2 {
+            width: 29.39130434782609%; //338px;
+        }
+        .item-corner {      
+            width: 29.39130434782609%; //338px;
+            height: 338px;
+            list-style:none;
+            overflow: hidden;
+        }
+        @include max-width(1023px) {
+            .item-corner {                
+                height: 282px;
+            }
+        }
+        @include max-width(799px) {
+            .element {
+                width: 24%;
+            }
+            .width1, .width2 {
+                width: 48%;
+            }
+            .item-corner {
+                width: 48%;
+                height: 240px;
+                overflow: hidden;
+            }
+        }
+        @include max-width(639px) {            
+            .element {
+                width: 32%;
+            }
+            .width1, .width2 {
+                width: 62%;
+            }
+            .item-corner {
+                width: 62%;
+                height: auto;
+            }
+        }
+        @include max-width(479px) {            
+            .element {
+                width: 48%;
+            }
+            .width1, .width2 {
+                width: 100%;
+            }
+            .item-corner {
+                width: 100%;
+                height: auto;
+            }         
+        }
+    }
+}
+
+/*--- kopa portfolio 2 widget ---*/
+.kopa-portfolio-2-widget {
+    .wrapper {
+        text-align: center;     
+    }    
+    header.style-1 {  
+        margin-bottom: 30px;     
+        .widget-title {            
+            color: $color1;
+            span {
+                color: #fff;
+            }
+        }
+        p {
+            color: #959595;
+        }
+    }
+    .filters-options {  
+        display: inline-block;
+        margin-bottom: 65px;    
+        li {
+            @extend %transition;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 17px;
+            cursor: pointer;
+            color: #fff;
+            background: transparent;
+            border: 1px solid rgba(220, 220, 220, .2);
+            &.active, &:hover {
+                border: 1px solid $color1;
+                background-color: $color1;
+            }
+            @include max-width(639px) {
+                margin-bottom: 2px;                
+            }
+        }
+    }
+    .portfolio-container {
+        position: relative;
+        .portfolio-list-item{
+            overflow: hidden;
+            text-align: center;
+            > li{
+                float: left;
+                width: 25%;
+                padding: 0.5px;
+                @include transition(.5s);
+                &.inactive { 
+                  visibility: hidden;
+                  opacity: 0;
+                }
+                @include max-width(639px) {
+                    width: 50%;               
+                }
+            }
+        }
+    }
+    
+    .entry-thumb {
+        @include entry-thumb-1(rgba(206, 3, 61, .4));
+    }
+}

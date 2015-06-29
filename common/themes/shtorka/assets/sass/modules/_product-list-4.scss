@@ -1,0 +1,70 @@
+/*--- kopa product list 4 widget ---*/
+.kopa-product-list-4-widget {
+    .wrapper {
+        text-align: center;     
+    }    
+    header.style-1 {  
+        margin-bottom: 30px; 
+        padding: 0;
+        border: none;    
+        .widget-title { 
+            color: $color-heading;
+            span {
+                color: $color1;
+            }
+        }
+        p {
+            color: #959595;
+        }
+    }
+    .filters-options {  
+        display: inline-block;
+        margin-bottom: 60px;    
+        li {
+            @extend %transition;
+            float: left;
+            height: 16px;
+            font: 400 14px/16px $font2;
+            padding: 0 20px;
+            cursor: pointer;
+            color: $color-heading;
+            text-transform: uppercase;
+            border-left: 1px solid #292929;  
+            @include max-width(479px) {
+                margin-bottom: 10px;
+                border-left: none;
+            }
+            &:first-child {
+                border-left: none;
+            }
+            &.active, &:hover {
+                color: $color1;
+            }
+        }
+    }
+    .product-container {
+        position: relative;
+        .product-list-item{
+            overflow: hidden;
+            text-align: center;
+            > li{
+                float: left;
+                width: 24%;
+                @include max-width(799px) {
+                    width: 49%;
+                }
+                @include max-width(639px) {
+                    width: 99%;
+                }                
+                //padding: 0.5px;
+                padding: 0 15px 60px;
+                @include transition(.5s);
+                &.inactive { 
+                  visibility: hidden;
+                  opacity: 0;
+                }
+            }
+        }
+    }      
+}
+

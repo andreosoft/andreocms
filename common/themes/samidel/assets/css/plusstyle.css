@@ -1,0 +1,14 @@
+.blockup{
+	margin-top: -60px;
+}
+.blockdown{
+	padding-bottom: 5px;
+}
+.content_frame{
+	padding: 20px;
+	border: 1px solid #777;
+}
+.sub_contact-item {
+	text-align: left;
+	padding: 0px;
+}

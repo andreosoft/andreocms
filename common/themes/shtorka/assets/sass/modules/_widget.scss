@@ -1,0 +1,93 @@
+/**
+ * 3.1 - Widget
+ * -------------------------------------------------------------------
+ */
+
+/*--- widget default ---*/
+.widget {
+    margin-bottom: 100px;     
+    @include max-width(479px) {
+        margin-bottom: 30px;
+    }
+    ul, ol {
+        @extend %list_reset;
+    }   
+    header.style-1 { 
+        text-align: center;       
+        .widget-title {
+            font: bold 50px/60px $font1;
+            color: #292929;
+            margin-bottom: 10px;
+            text-transform: none;
+            span {
+                color: $color;
+            }
+        }
+        p {
+            padding: 0 300px;
+            font: italic 14px/22px $font2;
+            color: #494949;
+        }
+    }
+    header.style-3 {
+        text-align: left;
+        .widget-title {
+            font: bold 35px/45px $font1;
+            color: #fff;
+            margin-bottom: 10px;
+            text-transform: none;  
+            margin-bottom: 20px;          
+        }
+        p {
+            font: italic 14px/22px $font2;
+            color: #fff;
+            margin-bottom: 35px;
+        }
+    }
+}
+
+//widget title - style7 (related posts)
+.widget-title.style7 {
+    font: 400 18px/23px $font2;
+    color: $color2;
+    padding-left: 17px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background-color: $color1;
+        top: 0;
+        left: 0;
+    }
+}
+
+//widget-title - style (mission)
+.widget-title.mission{
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 600;
+    font-family: $font2;
+    text-transform: capitalize;
+    color: $color2;
+    position: relative;
+    padding: 0 0 0 20px;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 5px;
+        height: 22px;
+        background: $color1;
+    }
+}
+
+@include max-width(979px) {
+    .widget header.style-1 p {
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,93 @@
+/**
+ * 3.5 - Bottom sidebar 
+ * -------------------------------------------------------------------
+ */
+
+#bottom-sidebar {
+    background-color: #191919;
+    padding: 75px 0 100px;
+    .widget {
+        margin-bottom: 25px;
+    }
+    .widget-title {
+        font-family: $font2; 
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #c8c8c8;
+        text-transform: none;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        &.style3 {
+            text-transform: capitalize;
+            border-bottom: none;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .widget {
+        a, ul li a {
+            font-size: 14px;
+            color: #575756;
+            &:hover {
+                color: #c8c8c8;
+            }
+        }
+    }
+    .widget_recent_entries {
+        > ul, ul.menu{
+            @extend %list_reset;
+            > li{
+                margin-top: 5px;   
+                border-top: none;
+                padding-top: 0;
+                &:first-child{
+                    margin-top: 0;
+                }    
+                > a{
+                    font-size: 14px;
+                    color: #575756;
+                    &:hover {
+                        color: #c8c8c8;
+                    }
+                }
+            }
+        }
+    }
+    .widget_tag_cloud .tagcloud a {
+        color: #575756;
+        border-color: #575756;
+        &:hover {
+            border-color: #c8c8c8;
+            color: #c8c8c8;
+        }
+    }
+    .widget_categories ul li {        
+        a {
+            width: 78%;
+            font-size: 14px;
+        }
+        span {
+            color: #575756;
+            background: none;
+        }
+    }
+    .widget_archive,
+    .widget_categories,
+    .widget_pages,
+    .widget_meta,
+    .widget_recent_comments, 
+    .widget_recent_entries,
+    .widget_rss { 
+      ul li {   
+        border-top: none;
+        padding-top: 0;
+      } 
+    }
+    .widget_rss { 
+      .rss-date, cite {
+        color: #575756;
+      }
+    }
+}

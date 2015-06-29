@@ -1,0 +1,18 @@
+.widget_tag_cloud{
+	.tagcloud{
+		margin:0 -4px;
+		a{
+			display:inline-block;
+			font-size:12px;
+			line-height:16px;
+			color:#353535;
+			border:1px solid #e7e7e7;
+			@include transition(0.3s);
+			padding:8px 17px;
+			margin:0 4px 8px;
+			&:hover{
+				border-color:#9a9a9a;
+			}
+		}
+	}
+}

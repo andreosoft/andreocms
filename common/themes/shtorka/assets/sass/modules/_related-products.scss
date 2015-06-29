@@ -1,0 +1,342 @@
+/*--- kopa related products ---*/
+
+.woocommerce, .woocommerce-page {
+	.kopa-related-products {		
+		.widget-title {
+			margin-bottom: 35px;
+		}
+	}
+}
+
+.woocommerce, .woocommerce-page {
+	.kopa-related-products, .kopa-product-list-3-widget, .kopa-product-list-4-widget {	
+		div.product {		
+			text-align: center;
+			padding: 0 15px;
+			.product-info {
+				margin-bottom: 15px;
+			}						
+			a {				
+				.image-wrapper {
+					@extend %transition;
+					border: 1px solid #494949;
+					padding: 10px;
+					background: #fff;
+					margin-bottom: 30px;
+					position: relative;
+					img {
+						margin: 0;
+						width: 100%;
+					}
+					.flag {
+						@extend %transition;
+						position: absolute;
+						display: inline-block;
+						width: 60px;
+						height: 27px;
+						text-align: center;
+						line-height: 27px;
+						background-color: rgba(73, 73, 73, .5);
+						top: 10px;
+						right: 10px;
+						color: #fff;
+						font-weight: 600;
+						font-size: 14px;
+						text-transform: uppercase;
+					}
+					.price {
+						@extend %transition;
+						position: absolute;
+						display: inline-block;
+						width: 80px;
+						height: 55px;
+						text-align: center;
+						line-height: 55px;
+						background-color: rgba(73, 73, 73, .5);
+						bottom: 10px;
+						right: 10px;
+						padding: 0;
+						margin: 0;
+						border: none;
+						ins {
+							text-decoration: none;
+						}
+						.amount {
+							color: #fff;
+							font-weight: 600;
+							font-size: 26px;							
+						}
+					}
+				}							
+				&:hover {
+					.image-wrapper {
+						border: 1px solid $color1;
+						background-color: $color1;
+					}					
+					.price, .flag {
+						background-color: $color1;
+					}
+				}
+			}
+			h3 {
+				margin-bottom: 15px;
+				a {
+					@extend %transition;
+					font: 600 16px/18px $font2;
+					color: $color-heading;
+					text-transform: uppercase;				
+					padding: 0;
+					@include a1-hover;
+				}				
+			}	
+			.product-color {
+				margin-bottom: 15px;
+				span {
+					display: inline-block;
+					width: 20px;
+					height: 17px;
+					border: 1px solid #c5c5c5;
+					&.color1 {background-color:#f8f8f8}
+					&.color2 {background-color:#eedfcf}
+					&.color3 {background-color:#e30000}
+					&.color4 {background-color:#e3006d}
+					&.color5 {background-color:#7e054a}
+					&.color6 {background-color:#d7e5cd}
+					&.color7 {background-color:#f3f3f3}
+					&.color8 {background-color:#e5cdcd}
+				}
+			}
+			.product-size {
+				margin-bottom: 15px;
+				span {
+					text-align: center;
+					display: inline-block;
+					width: 20px;
+					height: 17px;
+					border: 1px solid #f3f3f3;
+					color: #c1c1c1;
+					font-size: 9px;
+					line-height: 17px;
+					font-family: arial;
+					&.active {
+						border: 1px solid #c7c7c7;
+						color: #000;
+					}
+				}					
+			}
+			.star-rating {	
+				margin-bottom: 20px;
+				&:before {
+					color: $color1;	
+				}			
+				span {
+					width: 70%;
+					&:before {
+						color: $color1;
+					}
+				}	  
+			}
+			.product-des {
+				font: 300 italic 14px/22px $font2;
+				padding: 0 25px;
+				margin-bottom: 15px;
+				color: #494949;
+			}	
+			.more-link {
+				display: inline-block;
+				margin: 0 auto;
+			}
+			.add-to-cart {		
+				@extend %fa;	
+				padding: 0;	
+				display: inline-block;
+				float: left;
+				width: 43px;
+				height: 30px;
+				border: 1px solid #8b8b8b;
+				background-color: #8b8b8b;
+				position: relative;					
+				&:before {
+					content: '\f07a';
+					color: #fff;
+					font-size: 17px;
+					line-height: 30px;
+					text-align: center;
+				}
+				&:hover {
+					border: 1px solid $color1;
+					background-color: $color1;
+				}
+			}
+			.product_type_simple {
+				display: inline-block;
+				float: left;
+				height: 30px;
+				padding: 0 14px;
+				border: 1px solid #171717;
+				background-color: #171717;
+				color: #fff;
+				font: 11px/28px arial;
+				text-transform: uppercase;
+				margin-left: -4px;
+				&:hover {
+					color: $color1;
+					border: 1px solid $color1;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+
+.widget {
+	&.kopa-product-list-3-widget {
+		.owl-theme .owl-controls.style3 {
+		  	right: 8px;
+		}
+		header {
+			padding: 0;
+			border: none;
+			margin-bottom: 55px;
+		}	
+		div.product {									
+			a {
+				.image-wrapper {					
+					.flag {						
+						right: 10px;						
+					}
+					.price {						
+						right: 10px;
+					}
+				}
+			}			
+		}
+	}
+}
+
+
+.woocommerce, .woocommerce-page {
+	.kopa-product-list-4-widget {
+		margin-bottom: 40px;			
+		div.product {
+			padding: 0;								
+			a {
+				.image-wrapper {
+					margin-bottom: 25px;					
+					.flag {
+						right: 10px;
+					}
+					.price {
+						right: 10px;
+						bottom: 10px;
+					}
+				}	
+			}
+			h3 {
+				margin-bottom: 10px;
+			}	
+			.product-color {
+				margin-bottom: 15px;
+				span {
+					display: inline-block;
+					width: 20px;
+					height: 17px;
+					border: 1px solid #c5c5c5;
+					&.color1 {background-color:#f8f8f8}
+					&.color2 {background-color:#eedfcf}
+					&.color3 {background-color:#e30000}
+					&.color4 {background-color:#e3006d}
+					&.color5 {background-color:#7e054a}
+					&.color6 {background-color:#d7e5cd}
+					&.color7 {background-color:#f3f3f3}
+					&.color8 {background-color:#e5cdcd}
+				}
+			}
+			.product-size {
+				margin-bottom: 15px;
+				span {
+					text-align: center;
+					display: inline-block;
+					width: 20px;
+					height: 17px;
+					border: 1px solid #f3f3f3;
+					color: #c1c1c1;
+					font-size: 9px;
+					line-height: 17px;
+					font-family: arial;
+					&.active {
+						border: 1px solid #c7c7c7;
+						color: #000;
+					}
+				}					
+			}
+			.rating-wrapper {
+				margin-bottom: 20px;
+			}
+			.star-rating {	
+				float: none;	
+				display: inline-block;
+				margin: 0;
+				&:before {
+					color: $color1;	
+				}			
+				span {
+					width: 70%;
+					&:before {
+						color: $color1;
+					}
+				}	  
+			}
+			.product-des {
+				font: 300 italic 14px/22px $font2;
+				padding: 0 25px;
+				margin-bottom: 15px;
+				color: #494949;
+			}	
+			.more-link {
+				display: inline-block;
+				margin: 0 auto;
+			}
+			.add-to-cart {		
+				@extend %fa;	
+				padding: 0;	
+				display: inline-block;
+				float: left;
+				width: 43px;
+				height: 30px;
+				border: 1px solid #8b8b8b;
+				background-color: #8b8b8b;
+				position: relative;					
+				&:before {
+					content: '\f07a';
+					color: #fff;
+					font-size: 17px;
+					line-height: 30px;
+					text-align: center;
+				}
+				&:hover {
+					border: 1px solid $color1;
+					background-color: $color1;
+				}
+			}
+			.product_type_simple {
+				display: inline-block;
+				float: left;
+				height: 30px;
+				padding: 0 14px;
+				border: 1px solid #171717;
+				background-color: #171717;
+				color: #fff;
+				font: 11px/28px arial;
+				text-transform: uppercase;
+				margin-left: -4px;
+				&:hover {
+					color: $color1;
+					border: 1px solid $color1;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}

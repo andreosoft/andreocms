@@ -1,0 +1,116 @@
+/*--- Social Links ---*/
+
+.kopa-social-links ul {
+    @extend %list_reset;  
+    li {
+        float: left;
+    }
+}
+
+.kopa-social-links.style-top {    
+    float: left;
+    li {
+        line-height: 14px;        
+        a { 
+            display: block;
+            height: 14px;
+            font-size: 14px;
+            line-height: 1;
+            padding: 0 13px;
+            color: #ecb8c1;
+            @include a-hover(#fff);            
+            border-left: 1px solid #ecb8c1;;
+        }
+    }
+}
+
+.kopa-social-links.style1 {
+    @extend %list_reset;
+    ul{
+        margin: -5px 0 0;
+        li {
+            float: left;
+            margin-top: 5px;
+            margin-left: 20px;
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: -10px;
+                width: 1px;
+                height: 14px;
+                background: url("images/background/bg/white/2.png");
+                background: rgba(255,255,255, 0.2); 
+            }
+            a {
+                
+            }
+        }  
+    }
+}
+
+.kopa-social-links.style2 {
+    @extend %list_reset;
+    margin-top: 20px;
+    ul{
+        margin: -8px -2px 0;
+        li {
+            display: inline-block;
+            position: relative;
+            margin: 8px 2px 0;
+            a {
+                @include icon(26px, 26px, 24px, 14px, none);
+                border: 1px solid #aaa;
+                color: #aaa;
+                &:hover{
+                    border-color: $color-hover;
+                    color: $color-hover; 
+                }
+            }
+        }  
+    }
+}
+
+.kopa-social-links.style3 {
+    @extend %list_reset;
+    ul{
+        margin: -8px -2px 0;
+        li {
+            display: inline-block;
+            position: relative;
+            margin: 8px 2px 0;
+            a {
+                @include icon(44px, 44px, 42px, 14px, $color);
+                border: 1px solid $color1;
+                border-radius: 50%;
+                color: $color5;
+                &:hover{
+                    border-color: $color-hover;
+                    background: $color-hover; 
+                    color: #fff;
+                }
+            }
+        }  
+    }
+}
+
+.kopa-social-links.style4 {
+    @extend %list_reset;
+    ul{
+        margin: -8px -3px 0;
+        li {
+            display: inline-block;
+            position: relative;
+            margin: 8px 3px 0;
+            a {
+                @include icon(38px, 38px, 38px, 18px, $border-01);
+                color: $color6;
+                &:hover{
+                    background: $color-hover; 
+                    color: #fff;
+                }
+            }
+        }  
+    }
+}

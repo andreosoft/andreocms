@@ -1,0 +1,87 @@
+/*--- Shop Detail ---*/
+
+.woocommerce, .woocommerce-page {
+	.kopa-shop-detail div.product {
+		ul {
+			@extend %list_reset;
+		}
+
+		div.images {			
+			margin-right: 35px;
+			width: 58.3%;
+			@include max-width(1023px) {
+				width: 100%;
+			}
+			.images-right {
+				float: right;
+				border: 1px solid #494949;
+				padding: 12px;
+				margin-bottom: 50px;				
+			}
+			.images-left {
+				float: left;
+				margin-bottom: 50px;
+				@include max-width(1023px) {
+					margin-right: 0;
+				}
+				li {
+					border: 1px solid #494949;
+					padding: 6px;
+					margin-bottom: 17px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}			
+		}
+		.summary {
+            float: none;
+            overflow: hidden;
+            width: auto;
+			margin-bottom: 50px;
+			@include max-width(1023px) {
+				float: left;
+			}
+			.entry-title {
+				font-size: 16px;
+				line-height: 24px;
+				font-family: $font2;
+				font-weight: 400;
+				color: #353535;
+				margin-bottom: 10px;
+			}
+			.star-rating {	
+				margin-bottom: 10px;
+				&:before {
+					color: #919191;	
+				}			
+				span {
+					width: 70%;
+					&:before {
+						color: #919191;
+					}
+				}	  
+			}
+            .price {
+                border: none;
+                padding: 0;
+                margin-bottom: 22px;
+                ins .amount {
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $color1;
+                    margin-right: 15px;
+                    float: left;
+                }
+                del {
+                    margin: 0;
+                    .amount {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #b8b8b8;
+                    }
+                }
+            }
+		}
+	}	
+}

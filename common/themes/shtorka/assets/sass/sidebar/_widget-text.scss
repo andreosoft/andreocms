@@ -1,0 +1,29 @@
+.widget {
+	.kopa-social-links-1{
+		ul{
+		  margin: -10px -5px 0;
+		  font-size:0;
+		  line-height:0;
+			li{
+				display: inline-block;
+				position: relative;
+				margin: 10px 5px 0;
+				a{
+					display: inline-block;
+					text-align: center;
+					width: 38px;
+					height: 38px;
+					line-height: 38px;
+					font-size: 18px;
+					background: #ececec;
+					color: #b5b5b5;
+					@include transition(0.3s);
+					&:hover{
+						color:#ffffff;
+						background:$color;
+					}
+				}
+			}
+		}
+	}
+}

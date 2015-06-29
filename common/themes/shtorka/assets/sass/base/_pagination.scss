@@ -1,0 +1,81 @@
+/*--- pagination ---*/
+
+.kopa-pagination {
+    @extend %list_reset;
+    @extend %clearfix;
+    width: 100%;
+    position: relative;    
+    font-size: 14px;
+    &:before{
+        display: none;
+    }
+    ul {
+        margin: 0;
+        li {
+            display: inline-block;
+            margin: 2px 0 0 0;
+            &:before{
+                display: none;
+            }
+            span, a{
+                @include icon(30px, 30px, 28px, 14px, #fff);
+                border: 1px solid $border-01;
+                display: block;
+                color: $color-body;
+                &.current {
+                    color: #fff;
+                    background: $color-hover;
+                    border-color: $color-hover;
+                }
+            }
+            &:hover, &.current {
+                a {
+                    color: #fff;
+                    background: $color-hover;
+                    border-color: $color-hover;
+                }
+            }
+        }
+    }
+}
+
+
+.kopa-pagination.style1 {
+    text-align: center;
+    margin-top: 30px;
+    &:before{
+        display: none;
+    }
+    ul {
+        margin: 0;
+        li {
+            display: inline-block;
+            margin: 2px 0 0 0;
+            &:before{
+                display: none;
+            }
+            &:first-child{
+                float: left;
+                margin-top: 6px;
+            }  
+            &:last-child{
+                float: right;
+                margin-top: 6px;
+            }           
+            span, a{
+                &.fa{
+                    @include icon(40px, 20px, 20px, 14px, #fff);
+                    height: 23px;
+                    line-height: 21px;
+                }
+            }
+            &:hover, &.current {
+                a {
+                    color: #fff;
+                    background: $color-hover;
+                    border-color: $color-hover;
+                }
+            }
+        }
+    }
+}

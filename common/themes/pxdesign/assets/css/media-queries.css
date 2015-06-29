@@ -1,0 +1,197 @@
+/* ---------------------------------------------------------------------- */
+/*	Version 1024px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 1024px) {
+	
+	/* Main Menu ------------------------------*/
+	.navbar .nav > li > a {
+		margin: 0 5px;
+		padding: 0 10px;
+	}
+
+	/* Header ------------------------------*/
+	.bigfigure {
+        width: 100%;
+        margin: 0px;
+    }
+
+    header h1 {
+    	font-size: 3em;
+    }
+
+    header h3 {
+		font-size: 1.4em;
+		line-height: 1.55em;
+	}
+
+	header a.btn {
+		font-size: 1.3em;
+		padding: 10px 15px; 
+		margin: 15px 2px 15px 0;
+	}
+
+
+	/* Testimonials ------------------------*/
+	.testimonials img {
+		display: none!important;
+	}
+
+	.testimonials .carousel-indicators {
+		top: -4%;
+	}
+	/* Pricing Tables ----------------------*/
+	.pricing-table h3, .pricing-table h4 {
+		font-size: 2em;
+	}
+
+	.pricing-table li.sign-up a.btn {
+		font-size: 0.9em;
+		padding: 10px 20px;
+	}
+
+	.copyright, .copyright {
+		float: none;
+		text-align: center;
+	}
+	
+	.copyright ul.social {
+		float: none;
+		text-align: center;
+	}
+	
+	a.scrollup {
+		display: none !important;
+	}
+
+
+
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+/* Portrait tablet to landscape and desktop 979px */
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 979px) { 
+	
+	/* Main Menu ------------------------------*/
+	.navbar-fixed-top {
+		margin: 0px;
+		width: auto;
+		padding: 0;
+	}
+	header {
+		padding: 60px 0 0 0;
+	}
+	.navbar .nav > li > a {
+		border: none;
+		margin: 0;
+		display: block;
+		width: 100%;
+	}
+	/* Effect: border switch */
+	.nav li a::before, 
+	.nav li a::after,
+	.nav li a:hover::before,
+	.nav li a:hover::after,
+	.nav li a:focus::before,
+	.nav li a:focus::after,
+	.nav li a:hover::before,
+	.nav li a:focus::before ,
+	.nav li a:hover::after,
+	.nav li a:focus::after  
+	{
+	display: none;
+	}
+
+	.nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus, .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus {
+		color: #1fb4da!important;	
+		background: #fff;
+	}
+
+	.features h2 {
+		font-size: 1.6em;
+	}
+
+	.features img {
+		width: 26%;
+	}
+
+
+
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 768px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 768px) {
+	header .logo {
+		padding: 0 0 12px 0;
+	}
+
+	/* Header ------------------------------*/
+	.bigfigure {
+        width: 100%;
+        margin: 0px;
+    }
+
+    header h1 {
+    	font-size: 2.8em;
+    	text-align: center;
+    }
+
+    header h3 {
+		font-size: 1.4em;
+		line-height: 1.55em;
+		text-align: center;
+	}
+
+	header .buttons{
+		text-align: center;
+	}
+
+	header a.btn {
+		font-size: 1.3em;
+		padding: 10px 15px; 
+		margin: 15px 2px 15px 0;
+	}
+
+	.features h2 {
+		font-size: 1.3em;
+	}
+
+	.features img {
+		width: 20%;
+	}
+
+	.testimonials blockquote {
+		font-size: 1.5em;
+		line-height: 1.2em;
+	}
+
+
+
+
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 480px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 480px) {
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 320px
+ /* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 320px) {
+
+}

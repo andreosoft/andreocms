@@ -1,0 +1,241 @@
+/**
+ * 3.2 - Sub Page
+ * -------------------------------------------------------------------
+ */
+
+@include min-width(980px) {
+  .kopa-main-col {
+  	float: left;
+    width: 74.15254237%;
+  }  
+  .sidebar {
+  	float: left;
+    width: 25.84745762%;
+  }
+}
+
+.contact-box, .comment-box {
+    margin: 0 0 0;
+    > h3{
+        text-transform: uppercase;
+    }
+    .input-block, .textarea-block{
+        position: relative;
+        margin: 10px 0 0;
+        span{
+            font-size: 16px;
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            color: $border-01;
+        }
+    }
+    .textarea-block{
+    }
+    .input-block{
+        &:first-child{
+        }
+    }
+    input, textarea {
+        box-shadow: none;
+        border: 1px solid $border-01;
+        background: none;
+        line-height: 20px;
+        padding: 9px 50px 9px 20px;
+        width: 100%;
+        font-style: italic;
+        color: $color-body;
+        &:focus {
+            border-color: $color-hover;
+            @extend %transition;
+            outline: 0;
+        }
+        &#submit-contact, &#submit-comment {
+            font-family: $fonta;
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-style: normal;
+            color: #fff;
+            width: 100%;
+            background: $color-hover;
+            text-align: center;
+            padding: 8px 20px;
+            margin-top: 10px;
+            border: 0;
+            @include transition(0.5s);
+            &:hover {
+                background: $color2;
+            }
+        }
+    }
+    textarea {
+        width: 100%;
+        padding: 9px 20px;
+    }
+    label.error {
+        color: $color-hover;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        margin: 0;
+        line-height: 40px;
+    }
+    .input-label{
+        color: $color;
+        margin: 5px 0 5px;
+        > span{
+            color: $color-hover;
+            margin-left: 5px;
+        }
+    }
+}
+
+.kopa-comment-form{
+    margin-top: 50px;
+}
+
+.comment-box {
+    input, textarea {
+        font-style: normal;
+        &#submit-contact, &#submit-comment {
+            width: auto;
+            padding: 8px 35px;
+            margin-top: 25px;
+            float: right;
+            text-transform: none;
+        }
+    }
+    label.error {
+        right: 15px;
+    }
+    .textarea-block{
+        margin-top: 30px;
+    }
+}
+
+.contact-box-1 {
+    margin: 30px 0 0;
+    .input-block, .textarea-block{
+        display: block;
+        position: relative;
+        margin: 5px 0 0;
+
+    }
+    .textarea-block{
+        margin: 20px 0 0;
+        label.error {
+            top: 35px;
+            right: 10px;
+        }
+    }
+    .input-block{
+        &:first-child{
+            margin: 10px 0 30px;
+        }
+    }
+    input, textarea {
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid $color1;
+        background: none;
+        font-family: $fontrw;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        padding: 10px 0;
+        width: 100%;
+        &:focus {
+            @extend %transition;
+            outline: 0;
+        }
+        &#submit-contact-1 {
+            font-family: $fontrw;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            background: $color-hover;
+            background: rgba(255, 198, 24, 0.5);
+            padding: 11px 15px;
+            margin-top: 40px;
+            border: 0;
+            @include transition(0.5s);
+            &:hover {
+                background: $color-hover;
+            }
+        }
+    }
+    textarea {
+        width: 100%;
+        height: 78px;
+        padding: 8px 15px;
+        border: 1px solid $color1;
+    }
+    label.error {
+        color: $color-hover;
+        position: absolute;
+        top: 8px;
+        right: 0;
+        margin: 0;
+        line-height: 30px;
+    }
+    .input-label{
+        font-family: $fontrw;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        margin: 0 0 10px;
+        display: block;
+        > span{
+            color: $color-hover;
+            margin-left: 5px;
+        }
+    }
+    .contact-button{
+        @include opacity(1);
+    }
+}
+
+.contact-info{
+    margin-bottom: 30px;
+    address{
+        font-family: $fonta;
+        font-weight: 600;
+        color: $color;
+        a{
+            font-family: $fonta;
+            font-weight: 400;
+            color: $color-hover;
+            &:hover{
+                color: $color1;
+            }
+        }
+        .ct-phone{
+            font-family: $fonta;
+            font-weight: 400;
+            color: $color1;
+        }
+    }
+}
+
+/*--- kopa mission list ---*/     
+
+.kopa-mission-list{
+    @extend %list_reset;
+    font-family: $font2;
+    font-weight: 600;
+    li{
+        color: $color2;
+        margin-top: 10px;
+        span{            
+            &:first-child{
+                color: $color1;
+                margin-right: 10px;
+            }
+        }
+    }
+}   

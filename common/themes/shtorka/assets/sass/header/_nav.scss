@@ -1,0 +1,479 @@
+/**
+ * 2.2 Navigation
+ * -------------------------------------------------------------------
+ */
+
+.humberger-menu-wrapper {
+    position: absolute;
+    z-index: 99999; 
+    height: 100%;
+    top: 0;
+    left: -300px;    
+}
+
+#overlay {
+    @extend %transition; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;    
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);   
+    z-index: 99995; 
+}
+
+#menu-icon {
+    position: absolute;
+    top: 104px;
+    left: 318px;
+    text-transform: uppercase;    
+    z-index: 999999;    
+    i {         
+        font-size: 18px;
+        color: #fff;
+        &:before {
+            @extend %transition;
+        }           
+    }
+    span {
+        @extend %transition;
+        padding-left: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+    }
+}
+
+#humberger-menu {
+    position: relative;
+    width: 294px;    
+    height: 100%;
+    padding: 155px 55px 0;
+    background-color: rgba(206, 3, 61, .7); //.7
+    overflow: visible;
+    z-index: 99999;    
+    .humberger-nav {
+        @extend %list_reset;
+        margin-bottom: 35px;
+        > li {
+            position: relative;
+            margin-top: 7px;
+            &:first-child {
+                margin-top: 0;
+            }
+            &.current-menu-item > a {
+                color: $color-hover2;
+            }
+            a {
+                display: block;
+                height: 34px;
+                font: 400 16px/34px $font2;
+                color: #fff;
+                padding-left: 20px;
+                text-transform: uppercase;
+                background-color: rgba(255, 255, 255, .15);
+                &:hover {
+                    color: $color-hover2;
+                }
+            }
+            ul {
+                min-width: 220px; 
+                padding-left: 55px; 
+                position: absolute;
+                top: 0;
+                left: 100%;
+                display: none;
+                li {
+                    a {
+                        font-size: 14px;
+                        border-bottom: 1px solid rgba(255, 255, 255, .3);
+                        background-color: rgba(206, 3, 61, 0.7); 
+                        text-transform: none;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                    &:last-child a {
+                        border-bottom: none;
+                    }
+                }
+            }                    
+        }
+    }
+    .navigator {
+        text-align: center;
+        padding-top: 25px;
+        margin-bottom: 25px;
+        position: relative;
+        color: #fff;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: 0;
+            background: url(images/divider/divider-3.png);
+        }
+        a {
+            color: #fff;
+            &:hover {
+                color: $color-hover2;
+            }
+        }
+        .fa {
+            font-size: 17px;
+            line-height: 27px;
+            color: #fff;
+            margin-right: 13px;
+        }
+        span {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 25px;
+            color: #090909;
+            width: 27px;
+            height: 27px;
+            background-color: rgba(255, 255, 255, .6);
+            position: relative;
+            margin-right: 15px;
+            &:before {
+                @include before-left(5px, 5px, 5px, rgba(255, 255, 255, .6));
+                right: 100%;
+                top: 50%;
+                margin-top: -5px;
+            }
+        }
+    }
+    .kopa-social-links {        
+        text-align: center;
+        padding-top: 25px;
+        margin-bottom: 15px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: 0;
+            background: url(images/divider/divider-3.png);
+        }
+        ul {
+            display: inline-block;
+            li {
+                margin: 0 15px;
+                a {
+                    &:before {
+                        @extend %transition;
+                        font-size: 20px;
+                        color: #fff;                        
+                    }
+                    &:hover {
+                        &:before {
+                            color: $color-hover2;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .copyright {
+        font-size: 13px;
+        color: #fff;
+        text-align: center;
+    }    
+}
+
+/*--- Kopa Header ---*/
+
+.kopa-header {
+    ul {
+        @extend %list_reset;
+    }
+    .kopa-main-nav {
+        @include max-width(639px) {
+            display: none;
+        }
+        .main-menu {
+            @extend %list_reset;
+            overflow: visible;
+            >li ul {
+                display: none;
+                min-width: 165px;
+                position: absolute;
+                top: 100%;
+                left: 0;   
+                li {
+                    &.current-menu-item a, &:hover a {                        
+                        color: $color5;                        
+                    }
+                    a {                        
+                        display: block;
+                        font: 500 14px/50px $font2;
+                        color: #dfdfdf;
+                        background-color: rgba(23, 23, 23, 0.7);
+                        border-bottom: 1px solid #3a3a3a;
+                        padding-left: 20px;
+                        text-transform: capitalize;                        
+                    }                
+                }  
+            }
+        }
+    }    
+}
+
+/*--- Header Style 1 /ELemen Page ---*/
+.kopa-header.style1 {  
+    @include max-width(639px) {
+        padding-top: 65px;
+    }
+    .kopa-header-bottom {
+        background-color: $color1;
+        border-bottom: 2px solid #fff;        
+        .kopa-logo {
+            float: left;
+            margin-top: 18px;
+        } 
+        @include max-width(639px) {
+            border-bottom: 1px solid #fff;   
+            padding-bottom: 14px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            .kopa-logo {
+                margin-top: 14px;
+            }
+        }       
+    }
+    .kopa-main-nav {
+        float: right;
+        .main-menu {
+            >li {
+                float: left;
+                position: relative;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.current-menu-item, &:hover {
+                    > a {
+                        color: $color5;                        
+                    }
+                }
+                a {   
+                    @include a-hover($color5);               
+                }
+                > a {
+                    display: block;
+                    font: 500 14px/76px $font2;
+                    padding: 0 20px;
+                    height: 76px;
+                    color: #fff;
+                    text-transform: uppercase;                    
+                    @include a-hover($color5);             
+                }            
+                ul {                     
+                    li {
+                        &.current-menu-item a, &:hover a {                        
+                            color: $color5;                        
+                        }
+                        a {      
+                            font: 500 14px/50px $font2;
+                            color: #fff;
+                            border-bottom: 1px solid rgba(236, 184, 193, 0.5);
+                            background-color: rgba(206, 3, 61, 0.7);         
+                        }
+                        &:last-child a {
+                            border-bottom: none;
+                        }
+                    }         
+                }             
+            }            
+        }
+    }
+}
+
+/*--- Kopa Header Style 2 / Home 2 ---*/
+
+.kopa-header.style2, .kopa-header.style3 {
+    .kopa-header-bottom {
+        position: relative;
+        .menu-wrapper {
+            position: absolute;
+            z-index: 12;
+            width: 100%;
+            background-color: rgba(23, 23, 23, 0.7);
+            @include max-width(639px) {
+                position: fixed;
+                top: 0;
+                border-bottom: 1px solid $color1;
+                padding-bottom: 15px;
+            }
+            .kopa-logo {
+                float: left;
+                margin-top: 13px;
+            }
+        }
+    }
+    .kopa-main-nav {    
+        float: right;
+        margin-top: 6px;
+        margin-right: -20px;
+        .main-menu {            
+            >li {
+                float: left;
+                margin-left: 3px;
+                position: relative;
+                &:first-child {
+                    margin-left: 0;                          
+                }  
+                &.current-menu-item, &:hover {
+                    > a {
+                        color: $color1;
+                        border-bottom: 2px solid $color1;
+                    }
+                }
+                a {   
+                    @include a1-hover;               
+                }
+                > a {
+                    display: block;
+                    font: 500 14px/58px $font2;
+                    height: 58px;
+                    color: #dfdfdf;
+                    text-transform: uppercase;
+                    padding: 0 20px;
+                    border-bottom: 2px solid transparent;                
+                }            
+                ul { 
+                    li {
+                        &.current-menu-item a, &:hover a {                        
+                            color: $color1;                        
+                        }
+                        a {        
+                            font: 500 14px/50px $font2;
+                            color: #dfdfdf;
+                            background-color: rgba(23, 23, 23, 0.7);
+                            border-bottom: 1px solid #3a3a3a;               
+                        }
+                        &:last-child a {
+                            border-bottom: none;
+                        }
+                    }         
+                }             
+            }
+        }
+    }
+}
+
+
+/*--- mobile menu ---*/
+#kopa-header, .kopa-header {
+    .mobile-menu-icon {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 12px;
+        width: 26px;
+        height: 23px;
+        background-color: $color1;
+        color: #fff;
+        line-height: 23px;        
+        text-align: left;
+        cursor: pointer;        
+        i {
+            margin-left: 6px;
+        }
+        @include max-width(639px) {
+            display: block;
+        }
+    } 
+}
+.main-nav-mobile {    
+    @extend %list_reset;
+    .main-menu-mobile {
+        @extend %clearfix;
+        position: absolute;
+        top: 65px;
+        right: 12px;
+        width: 220px;
+        height: auto;
+        z-index: 999999;
+        display: none;
+        background: #fff;
+        border: 1px solid $border-02;
+        padding: 5px 15px 0;
+        text-align: left;
+        @extend %list_format;
+        @include max-width(639px) {
+          overflow-y: scroll;
+        }
+        > li {
+            border-top: 1px solid rgba(228, 222, 207, 0.5);
+            position: relative;
+            width: 100%;
+            &:first-child {
+                border: 0;
+            }
+            > a {
+                color: $color-heading;
+                font-family: $font2;
+                text-transform: capitalize;
+                font-size: 14px;
+                display: block;
+                padding: 10px 25px 10px 0;
+                &:hover{
+                    color: $color-hover;
+                }
+                > span {
+                    position: absolute;
+                    right: 5px;
+                    top: 20px;
+                    cursor: pointer;
+                    font-size: 15px;                    
+                }
+            }
+            &.current-menu-item{
+                > a{
+                    color: $color-hover;
+                }
+            }
+            .sub-menu {
+                li {
+                    border-top: 1px solid $border-02;
+                    a {
+                        padding: 10px 10px;
+                        color: $color-heading;
+                        text-transform: capitalize;
+                        display: block;
+                        position: relative;
+                        &:hover{
+                            color: $color-hover;
+                        }
+                    }
+                    span {
+                        display: none;
+                    }
+                    .sub-menu {
+                        display: block !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        height: auto !important;
+                        width: 100%;
+                    }
+                    &.current-menu-item  {
+                        > a{
+                            color: $color-hover;
+                        }
+                    }
+                }
+            } 
+        }        
+    }
+}
+

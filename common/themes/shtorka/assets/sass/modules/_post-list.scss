@@ -1,0 +1,227 @@
+/*--- kopa post list widget ---*/
+.kopa-post-list-widget {    
+    .excerpt {
+        font-style: italic;
+    }
+    .big-post {
+        float: right;
+        width: 505px;
+        padding-top: 155px;
+        padding-right: 75px;
+        text-align: right;
+        @include max-width(1023px) {
+            width: auto;
+            padding-right: 50px;
+        }
+        @include max-width(639px) {
+            padding-top: 0;
+            padding-right: 20px;
+            margin-bottom: 50px
+        }
+        @include max-width(479px) {
+            padding-right: 0px;
+        }
+        h5 {
+            margin-bottom: 20px;
+            a {
+                font: bold 50px/55px $font1;
+                text-transform: none;
+                color: #fff;
+                &:hover {
+                    color: $color;
+                }
+            }           
+        }
+        .excerpt {
+            margin-bottom: 20px;
+        }
+        .kopa-button {
+            display: inline-block;
+        }
+    }
+    .related-posts-wrapper {
+        @include max-width(639px) {
+            margin-left: 70px;
+        }
+        @include max-width(479px) {
+            margin-left: 40px;
+        }
+    }
+    .related-posts {
+        padding: 20px 0;
+        border-left: 1px solid #4a4a4a;
+        @include max-width(639px) {
+            padding-right: 15px;
+        }
+        ul {
+            @extend %list_reset;
+            li {
+                margin-top: 40px;
+                position: relative;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    background-color: $color;
+                    left: 0;
+                    top: 10px;
+                    margin-left: -16px;
+                }
+                &:after {
+                    @extend %transition;
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 2px solid #fff;
+                    left: 0;
+                    top: 18px;
+                    margin-left: -8px;
+                    @include opacity(0);
+                }
+                &:hover {
+                    &:after {
+                        @include opacity(1);
+                    }
+                }
+                .entry-item {
+                    padding-left: 75px;
+                    padding-right: 65px;
+                    @include max-width(479px) {
+                        padding-right: 20px;
+                    }
+                    .date {
+                        font-size: 13px;
+                        font-size: 17px;
+                        color: #ff0049;
+                        margin-bottom: 5px;
+                    }
+                    h5 {
+                        margin-bottom: 15px;
+                        a {
+                            font: 600 18px/20px $font2;
+                            color: #fff;
+                            &:hover {
+                                color: $color;
+                            }
+                        }                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--- kopa post list 2 widget ---*/
+.kopa-post-list-2-widget {
+    @include min-width(1200px) {
+        .row {
+            > div:first-child {
+                width: 570px;
+            }
+            > div:last-child {
+                width: 610px;
+            }
+        }
+    }
+    .excerpt {
+        font-style: italic;
+    }
+    .big-post {
+        float: right;
+        width: 505px;
+        padding-top: 210px;
+        padding-right: 55px;
+        text-align: right;
+        @include max-width(799px) {
+            padding-left: 20px;
+            width: auto;
+        }
+        @include max-width(639px) {
+            padding-top: 0;
+            margin-bottom: 30px;
+        }
+        h5 {
+            margin-bottom: 20px;
+            a {
+                font: bold 50px/55px $font1;
+                text-transform: none;
+                color: #fff;
+                &:hover {
+                    color: $color;
+                }
+            }           
+        }
+        .excerpt {
+            margin-bottom: 20px;
+        }        
+    }
+    .related-posts {
+        padding: 20px 0;
+        border-left: 2px solid #4a4a4a;
+        @include max-width(639px) {
+            margin-left: 50px;
+        }
+        ul {
+            @extend %list_reset;
+            li {
+                margin-top: 40px;
+                position: relative;
+                &:first-child {
+                    margin-top: 0;
+                }   
+                .entry-thumb{
+                    @extend %transition;
+                    position: absolute;
+                    width: 108px;
+                    height: 108px;
+                    border: 3px solid #fff;
+                    border-radius: 50%;
+                    top: 17px;
+                    left: 0;
+                    margin-left: -54px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }   
+                &:hover {
+                    .entry-thumb {
+                        border-color: $color1;
+                    }
+                }          
+                .entry-item {
+                    padding-left: 110px;
+                    padding-right: 60px;
+                    @include max-width(799px) {
+                        padding-left: 80px;
+                        padding-right: 20px;
+                    }
+                    .date {
+                        font-size: 13px;
+                        font-size: 17px;
+                        color: #ff0049;
+                        margin-bottom: 5px;
+                    }
+                    h5 {
+                        margin-bottom: 15px;
+                        a {
+                            font: 600 18px/20px $font2;
+                            color: #fff;
+                            &:hover {
+                                color: $color;
+                            }
+                        }                       
+                    }
+                }
+            }
+        }
+    }
+}

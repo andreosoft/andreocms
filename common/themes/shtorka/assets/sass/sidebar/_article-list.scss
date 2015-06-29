@@ -1,0 +1,85 @@
+.sidebar{
+	.widget{
+		margin:0 0 50px;
+	}
+}
+
+.article-list-1{
+	>ul{
+		margin-top:-20px;
+		>li{
+			  margin:20px 0 0;
+			  padding-bottom: 20px;
+			  border-bottom: 1px solid #ededed;
+		}
+	}
+	.entry-item{
+		.entry-thumb{
+			  width: 76px;
+			  float: left;
+			  margin-right: 15px;
+		}
+		.entry-content{
+			overflow:hidden;
+			.entry-date{
+				font-size:14px;
+				line-height:20px;
+				color:#8e8e8e;
+				i{
+					margin:0 5px 0 0;
+				}
+			}
+		}
+	}
+}
+
+.article-list-2{
+	>ul{
+		margin-top:-13px;
+		>li{
+			margin:9px 0 0;
+			a{
+				color:#353535;
+				font-size:14px;
+				line-height:20px;
+				@include a1-hover;
+				i{
+					margin:0 6px 0 0;
+					color:#8e8e8e;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+/*--- Extra scss ---*/
+.search-box.style1 .search-form {
+	@include max-width(979px) {
+		width: 270px;
+	}
+	@include max-width(799px) {
+		width: 240px;
+	}
+	@include max-width(767px) {
+		width: 200px;
+	}
+}
+
+.woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
+	margin-bottom: 20px;
+}
+.search-box {
+	margin-bottom: 20px;	
+}
+
+.kopa-post-list-2-widget .big-post {
+	@include max-width(1023px) {
+		width: auto;
+	}
+}
+
+.single-other-post > div > .entry-item header a:hover {
+	color: $color1;
+}
+
+.error {
+	color: $color1;
+}
+
+.contact-box label.error, 
+.comment-box label.error {
+	position: relative;
+	right: auto;
+}
+
+.sidebar {
+	float: left;
+}
+
+.kopa-pagination.style1 ul li:last-child {
+	margin-right: 10px;
+}
+
+.woocommerce-ordering .orderby {
+	padding: 4px 12px;
+}
+
+#colorbox,
+#cboxContent,
+#cboxLoadedContent,
+#colorbox img {
+	max-width: 100%;
+}
+#cboxWrapper {
+	max-width: 95%;
+}
+
+#cboxNext {
+	right: 0;
+}
+
+#colorbox, #cboxOverlay, #cboxWrapper {
+	z-index: 99999;
+}
+
+.kopa-testimonial-2-widget .entry-item,
+.kopa-post-list-2-widget .related-posts ul li {
+	.entry-thumb {
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    border-radius: 50%;
+	    -khtml-border-radius: 50%;
+	    border: 3px solid #fff;
+	    img {
+	        -webkit-border-radius: 50%;
+	        -moz-border-radius: 50%;
+	        border-radius: 50%;
+	        -khtml-border-radius: 50%;
+	        vertical-align: middle;
+	    }
+	}
+}
+ 
+.kopa-header.style1 .sb-search-wrapper {
+	width: 270px;
+	.sb-search-input {
+		width: 230px;
+	}
+}

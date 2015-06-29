@@ -1,0 +1,68 @@
+.kopa-twitter-widget{
+	ul{
+		li{
+			margin-top: 20px;
+  			padding-top: 20px;
+  			border-top: 1px solid #e5e5e5;
+  			&:first-child{
+  				margin:0;
+  				padding:0;
+  				border:0;
+  			}
+			.tw-item{
+				header{
+					position:relative;
+				  	margin-bottom: 10px;
+					padding-left: 51px;
+					min-height: 38px;
+					>span{
+						text-align: center;
+						width: 38px;
+						height: 38px;
+						line-height: 38px;
+						font-size: 22px;
+						position: absolute;
+						top: 0;
+						margin-top: -20px;
+						margin-left: -20px;
+						left: 0;
+						margin: 0;
+						color:$color;
+						border:1px solid #dfdfdf;
+						@include circle;
+					}
+					h6{
+						font-size:14px;
+						line-height:20px;
+						font-family:$font2;
+						padding:10px 0 0;
+						font-weight:500;
+						margin:0;
+						a{
+							color:$color2;
+							@include a1-hover;
+						}
+					}
+				}
+				.twitter-content{
+					p{
+						color:#8e8e8e;
+						font-size:14px;
+						line-height:20px;
+						margin:0 0 7px;
+						a{
+							color:$color;
+						}
+					}
+					.entry-date{
+						color:#353535;
+						font-size:14px;
+						line-height:21px;
+						font-style:italic;
+						@include a1-hover;
+					}
+				}
+			}
+		}
+	}
+}

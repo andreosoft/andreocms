@@ -1,0 +1,57 @@
+.widget-title.style3{
+	  font-size: 15px;
+	  line-height: 20px;
+	  position: relative;
+	  margin-bottom: 20px;
+	  text-align: left;
+	  padding-bottom: 10px;
+	  border-bottom: 1px solid #e5e5e5;
+	  font-family:$font2;
+	  font-weight:600;
+	  @include uppercase;
+	  color:#353535;
+	  &:before{
+		content: '';
+		background: $color1;
+		height: 1px;
+		width: 62px;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+	  }
+}
+
+.entry-title.style1{
+	margin:0 0 9px;
+	font-size:14px;
+	line-height:20px;
+	font-family:$font2;
+	font-weight:400;
+	margin-top:-2px;
+	a{
+		color:#353535;
+		@include a1-hover;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

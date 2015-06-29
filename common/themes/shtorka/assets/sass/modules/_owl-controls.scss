@@ -1,0 +1,273 @@
+.owl-theme {
+    .owl-controls {
+        @extend %transition;
+        margin: 0;
+        .owl-buttons div {            
+            padding: 0;
+            margin: 0;
+            border-radius: 0;            
+            @include opacity(1);
+            @include transition(.5s);
+            width: 22px;
+            height: 22px;
+            color: #8e8e8e;
+            background-color: #fff;
+            &:before {
+                @extend %fa;
+                @include transition(.5s);
+            }
+            &.owl-prev {
+                left: 0;
+                padding-right: 2px;
+                &:before{
+                    content: "\f104";                    
+                }
+            }
+            &.owl-next {
+                right: 0;
+                padding-left: 2px;
+                &:before{
+                    content: "\f105";
+                }
+            }
+        }        
+    } 
+}
+
+.owl-theme {
+    .owl-controls.style1 {         
+        .owl-pagination {           
+            position: absolute;
+            z-index: 3;
+            bottom: 0px;
+            left: 0;
+            width: 100%;  
+        }
+        .owl-page {
+            position: relative;
+            z-index: 5;
+            margin-bottom: 20px;
+            @include max-width(479px) {
+                margin-bottom: 5px;
+            }
+            span {
+                width: 10px;
+                height: 10px;
+                margin: 0 3px;
+                background-color: #c35e7b;
+                @include opacity(1);
+            }
+            &.active, &:hover {
+                span {
+                    background-color: #fff;
+                }
+            }
+        }
+        .owl-buttons div {  
+            @extend %transition;
+            position: absolute;            
+            @include opacity(.2);            
+            width: 35px;
+            height: 70px;
+            top: 50%;
+            padding: 0;
+            margin-top: -35px;
+            &:before {
+                content: '';
+            }
+            &:hover {
+                color: $color;
+            }           
+            &.owl-prev {             
+                left: 35px;             
+                background: url(images/icons/carousel-nav.png) 0 0 no-repeat;
+            }
+            &.owl-next {
+                right: 35px;  
+                background: url(images/icons/carousel-nav.png) -35px 0 no-repeat;
+            }
+        }
+    }
+
+    //style4: testimonial 2
+    .owl-controls.style4 {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        .owl-page {
+            span {
+                width: 13px;
+                height: 13px;
+                margin: 0px 4px 0;
+                @include opacity(1);
+                background: #b8b8b9;
+                border: none;
+                @include transition(.5s);
+                border-radius: 50%;
+            }
+            &.active span, &:hover span {
+                background: $color1;
+            }
+        }
+    }
+
+    //style3: product-list 3
+    .owl-controls.style3 {
+        position: absolute;
+        top: -73px;
+        right: 0px;
+        .owl-buttons div {
+            width: 25px;
+            height: 25px;
+            font-size: 25px;
+            line-height: 20px;
+            color: #c8c8c8;
+            background-color: transparent;    
+            &:hover {
+                color: $color1;
+            }       
+            &.owl-prev {
+
+            }
+            &.owl-next {
+                border-left: 1px solid #c8c8c8;
+            }
+        }
+    }
+
+    //style5: mission(about page)
+    .owl-controls.style5 {    
+        .owl-buttons div {                         
+            color: #fff;
+            background: url("images/background/bg/black/7.png");
+            background: rgba(41, 41, 41, 0.7);             
+            @include button(40px, 40px, 40px, 28px, 50%);
+            &:hover {
+                color: #fff;
+                background-color: rgba(206, 3, 61, 0.7);
+            }
+            &.owl-prev {
+                left: 18px;
+                padding-right: 2px;
+            }
+            &.owl-next {
+                right: 18px;
+                padding-left: 2px;
+            }
+
+        }
+    }
+
+    //style6: related posts, single portfolio
+    .owl-controls.style6 {
+        position: absolute;
+        top: -58px;
+        right: 15px;
+        .owl-buttons div {            
+            width: 22px;
+            height: 22px;
+            border: 1px solid #ebebeb;
+            font-size: 16px;
+            line-height: 20px;
+            color: #8e8e8e;
+            &:hover {
+                border-color: $color1;
+                &:before {
+                    color: $color1;
+                }
+            }
+            &.owl-next {
+                margin-left: 3px;
+            }
+        }
+    }
+
+    //style7: sync portfolio carousel
+    .owl-controls.style7{
+        .owl-buttons div {
+            @include controls7-setting(56px, 116px, 40px, 8px);  
+            @include max-width(639px) {
+                @include controls7-setting(40px, 80px, 30px, 6px);
+            }          
+        }
+    }
+
+    //style9: sync portfolio carousel. sync4
+    .owl-controls.style9{
+        .owl-buttons div {
+            @include button(22px, 22px, 22px, 15px, 50%);
+            color: #fff; 
+            background: rgba(29, 29, 29, 0.5);            
+            &:hover {
+                background-color: rgba(206, 3, 61, 0.5);
+            }
+            &.owl-prev {
+                left: 10px;    
+            }
+            &.owl-next {
+                right: 10px;
+            }
+
+        }
+    }
+}
+
+/*--- Home Top Carousel 1 Controls ---*/
+.owl-home-top-carousel.owl-theme {
+    .owl-controls.style1 {
+        .owl-pagination {
+            &:before {            
+                @include max-width(639px) {
+                    width: 110px;
+                    height: 46px;
+                    margin-left: -55px;
+                    background: url(images/background/owl-controls-bg-sm.png) no-repeat;
+                }
+            }
+            &:after { 
+                @include max-width(639px) {
+                    height: 6px;
+                }
+            }
+            .owl-page {
+                @include max-width(639px) {
+                    margin-bottom: 0px;
+                }
+            }
+            @include max-width(639px) {
+                display: none;
+            }
+        }
+        @include max-width(479px) {
+            .owl-buttons 
+            > div {
+                display: inline-block;
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                background: none;
+                font-size: 30px;
+                @include opacity(1);
+                width: 30px;
+                height: 30px;
+                margin-top: -15px;
+                &.owl-prev {
+                    left: 10px;
+                    &:before {
+                        content: '\f104';
+                    }
+                }
+                &.owl-next {
+                    right: 10px;                    
+                    &:before {
+                        content: '\f105';
+                    }
+                }
+            }
+        }
+    }
+}

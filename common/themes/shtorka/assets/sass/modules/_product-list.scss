@@ -1,0 +1,209 @@
+/*--- Kopa product list widget ---*/
+.kopa-product-list-widget { 
+    .owl-product-list-carousel {
+        padding-top: 80px;
+        position: relative;
+        .product-item {
+            padding: 0 15px;
+        }
+        .owl-controls {
+            position: absolute;
+            width: 100%;  
+            margin-top: 25px;          
+            top: 0;
+            left: 0;            
+        }
+    }
+    .product-thumb {  
+        margin-bottom: 25px;
+        border: 1px solid #494949;
+        position: relative;
+        &:hover {
+            border-color: $color;
+            .price {            
+                background-color: $color;
+            }
+            > a {
+                border: 1px solid $color;
+                border: 10px solid $color;
+            }
+        }
+        > a {
+            @extend %transition;
+            display: block;    
+            width: 100%;
+            height: 100%;        
+            border: 10px solid transparent;
+            position: relative;
+            overflow: hidden; 
+            img {
+                width: 100%;
+            }                
+        }
+        .price { 
+            @extend %transition;                  
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 0 20px;
+            height: 55px;
+            background-color: rgba(73, 73, 73, .5); 
+            color: #fff;  
+            font: bold 26px/55px $font2;
+        }
+    }
+    .product-content {
+        text-align: center;
+        .product-name {
+            margin-bottom: 0px;
+            a {
+                font: bold 16px/20px $font2;
+                color: #292929;
+                text-transform: uppercase; 
+                &:hover {
+                    color: $color-hover;
+                }                
+            }
+        }
+        .desc {
+            font-style: italic;
+            color: #494949;
+            width: 80%;
+            margin: 0 auto 20px;
+        }
+    } 
+    .owl-theme .owl-controls .owl-page {    
+        &.active, &:hover {
+            span {                        
+                background-color: $color;
+            }
+        }
+        span {
+            @extend %transition;
+            width: 10px;
+            height: 10px;
+            margin: 0 3px;
+            background-color: #b8b8b9;
+            opacity: 1;
+            filter: Alpha(Opacity=100);
+        }
+    }  
+    footer {
+        display: inline-block;
+        .fa {
+            float: left;
+            height: 30px;
+            width: 43px;
+            background-color: $color;
+            line-height: 30px;
+            font-size: 16px;
+            color: #fff;
+            &:hover {
+                background-color: #171717;
+            }
+        }
+        .read-more {
+            display: block;
+            float: left;
+            border: 1px solid $color;
+            height: 30px;
+            font: 11px/28px arial;
+            text-transform: uppercase;
+            background-color: transparent;
+            padding: 0 13px;
+            &:hover {
+                border-color: #171717;
+                background-color: #171717;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/*--- Kopa product list 2 widget ---*/
+.kopa-product-list-2-widget {
+    margin-bottom: 50px;
+    .widget-title {
+        font: 600 20px/26px $font2;
+        color: $color-heading;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #d7d7d7;
+        text-transform: uppercase;
+    }
+    .item {
+        padding: 30px 30px 15px 0;
+        text-align: center;     
+    }
+    .image-wrapper {
+        position: relative;
+        display: inline-block;
+        &:hover {
+            cursor: pointer;
+            .price {
+                background-color: rgba(206, 3, 61, .6);
+            }
+        }           
+        .price {    
+            @extend %transition;    
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(23, 23, 23, .6);
+            bottom: -15px;
+            right: -25px;
+            text-align: center;
+            font: 600 24px/80px $font2;
+            color: #fff;            
+        }
+    }
+}
+
+.kopa-area-7 {
+    .kopa-product-list-3-widget.style1 {
+        header {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.kopa-product-list-3-widget.style1 {    
+    .owl-theme .owl-controls {
+        .owl-pagination {
+            position: absolute;
+            width: 100%;
+            top: -60px;
+            .owl-page {    
+                &.active, &:hover {
+                    span {                        
+                        background-color: $color;
+                    }
+                }
+                span {
+                    @extend %transition;
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 3px;
+                    background-color: #b8b8b9;
+                    opacity: 1;
+                    filter: Alpha(Opacity=100);
+                }
+            }  
+        }
+    }   
+}
+
+
+.kopa-product-list-3-widget {
+    @include max-width(799px) {
+        div.product {
+            width: 288px;
+            margin: 0 auto;
+        }
+    }
+    @include between-width(768px, 799px) {
+        width: 588px;
+        margin: 0 auto 90px;        
+    }
+    
+}

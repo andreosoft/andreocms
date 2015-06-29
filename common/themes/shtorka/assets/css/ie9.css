@@ -1,0 +1,14 @@
+.kopa-header .sb-search-wrapper .sb-search-input {
+  margin-top: 3px; }
+
+#kopa-header .top-content {
+  background: url(../images/background/ab-bg-top.png); }
+  #kopa-header .top-content .top-content-bg-1 {
+    display: none; }
+
+#above-bottom-sidebar .ab-bg {
+  background: url("../images/background/ab-bg-3.png") top left no-repeat; }
+#above-bottom-sidebar .ab-bg-1, #above-bottom-sidebar .ab-bg-2, #above-bottom-sidebar .ab-bg-left, #above-bottom-sidebar .ab-bg-right {
+  display: none; }
+
+/*# sourceMappingURL=ie9.css.map */

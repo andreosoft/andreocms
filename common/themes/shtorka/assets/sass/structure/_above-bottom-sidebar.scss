@@ -1,0 +1,109 @@
+/**
+ *  3.4 - Above Bottom Sidebar
+ * -------------------------------------------------------------------
+ */
+
+#above-bottom-sidebar { 
+    @extend %clearfix;   
+    padding-top: 170px;
+    @include max-width(479px) {
+        padding-top: 120px;
+    }
+    position: relative;
+    background: url("http://placehold.it/1366x603");   
+    background-size: cover; 
+    text-align: center;
+    overflow: hidden;
+    .span-bg {
+        background: rgba(23, 23, 23, 0.85);
+    }
+    .ab-bg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 234px;
+        height: 86px;        
+        margin-left: -116px;
+        z-index: 3;
+        .ab-bg-left {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            margin-top: -25px;
+            margin-left: 8px;
+            background: -webkit-linear-gradient(left, top, transparent, rgba(206, 3, 61, .5)); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom right, transparent, rgba(206, 3, 61, .5)); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom right, transparent, rgba(206, 3, 61, .5)); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom right, transparent, rgba(206, 3, 61, .5)); /* Standard syntax (must be last) */
+            @include rotate(45deg);
+        }
+        .ab-bg-right {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            margin-top: -25px;
+            margin-right: 7px;
+            background: -webkit-linear-gradient(left, top, transparent, rgba(206, 3, 61, .5)); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom right, transparent, rgba(206, 3, 61, .5)); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom right, transparent, rgba(206, 3, 61, .5)); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom right, transparent, rgba(206, 3, 61, .5)); /* Standard syntax (must be last) */
+            @include rotate(45deg);
+        }
+        .ab-bg-1 {
+            position: absolute;
+            width: 122px;
+            height: 122px;
+            top: 0;
+            left: 50%;
+            margin-top: -61px;
+            margin-left: -61px;
+            background: -webkit-linear-gradient(left, top, transparent, rgba(206, 3, 61, .5)); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom right, transparent, rgba(206, 3, 61, .5)); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom right, transparent, rgba(206, 3, 61, .5)); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom right, transparent, rgba(206, 3, 61, .5)); /* Standard syntax (must be last) */
+            @include rotate(45deg);
+        }
+        .ab-bg-2 {
+            position: absolute;
+            width: 85px;
+            height: 85px;
+            top: 0;
+            left: 50%;
+            margin-top: -43px;
+            margin-left: -43px;
+            background-color: $color1;
+            z-index: 3;
+            @include rotate(45deg);
+        }
+    }
+    .footer-logo {
+        margin-bottom: 25px;
+        position: relative;
+    }
+    .divider-1 {
+        height: 1px;
+        @include opacity(.5);
+    }
+}
+
+/*--- Contact Info ---*/        
+
+.kopa-contact-info-2-widget {
+    > ul {
+        > li {
+            margin-top: 10px;
+            p {
+                color: $color2;
+                font-family: arial;
+                span {
+                    font-size: 20px;
+                    float: left;
+                    width: 34px;
+                    color: #8e8e8e;
+                }
+            }
+        }
+    }
+}

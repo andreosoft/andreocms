@@ -1,0 +1,28 @@
+.kopa-flickr-widget{
+	.flickr-wrap{
+		>ul{
+			@include clearfix;
+			margin:-10px -5px 0;
+			>li{
+				padding:0 5px;
+				float:left;
+				width:33.33333%;
+				margin:10px 0 0;
+				a{
+					width:100%;
+					height:84px;
+					display:block;					
+					img{
+						max-width:100%;
+					}
+				}
+				@include max-width(799px) {
+					width: auto;
+					a {
+						width: 84px;
+					}					
+				}
+			}
+		}
+	}
+}

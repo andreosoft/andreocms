@@ -1,0 +1,98 @@
+/*--- kopa team widget ---*/
+.kopa-team-widget {
+    margin-bottom: 95px;
+    .owl-team-carousel {
+        padding-top: 90px;
+        position: relative;
+        .owl-controls {
+            position: absolute;
+            width: 100%;  
+            margin-top: 25px;          
+            top: 0;
+            left: 0;            
+        }
+    }
+    .member-item {
+        padding: 0 15px;
+    }
+    .member-thumb { 
+        @extend %transition;
+        margin-bottom: 25px;
+        border: 1px solid #494949;
+        position: relative;
+        padding: 10px;
+        img {
+            width: 100%;
+        }
+        &:hover {
+            border: 1px solid $color;
+            background-color: $color;
+            .kopa-social-links {
+                @include opacity(1);
+            }            
+        }        
+        .kopa-social-links { 
+            @extend %transition;                  
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 120px;
+            height: 30px;
+            @include opacity(0);
+            ul {                
+                text-align: center;
+                li {
+                    float:left;
+                    a {
+                        @extend %transition;
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        background-color: $color;
+                        font-size: 15px;
+                        color: #fff;                        
+                        &:hover {
+                            background-color: #171717;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .member-content {
+        text-align: center;
+        .member-name {
+            margin-bottom: 0px;
+            a {
+                font: bold 16px/20px $font2;
+                color: #292929;
+                text-transform: uppercase; 
+                &:hover {
+                    color: $color-hover;
+                }                
+            }
+        }
+        .job {
+            font-style: italic;
+            color: #494949;
+        }
+    }  
+    .owl-theme .owl-controls .owl-page {    
+        &.active, &:hover {
+            span {                        
+                background-color: $color;
+            }
+        }
+        span {
+            @extend %transition;
+            width: 10px;
+            height: 10px;
+            margin: 0 3px;
+            background-color: #b8b8b9;
+            opacity: 1;
+            filter: Alpha(Opacity=100);
+        }
+    }  
+}

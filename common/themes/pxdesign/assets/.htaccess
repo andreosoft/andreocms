@@ -1,0 +1,9 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^pxdesign.ru
+RewriteRule ^(.*)$ http://www.pxdesign.ru/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://www.pxdesign.ru [R=301,L]

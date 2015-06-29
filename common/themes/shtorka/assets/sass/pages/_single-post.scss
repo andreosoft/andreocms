@@ -1,0 +1,428 @@
+.kopa-entry-post{
+    > article{
+        .entry-thumb {
+            border: 1px solid #333;
+            padding: 12px;
+            margin-bottom: 30px;
+        }
+        .entry-title{
+            font-family: $font2;
+            font-weight: 500;
+            font-size: 23px;
+            line-height: 30px;
+            margin-bottom: 15px;
+            color: #353535;
+        }
+    }
+    .kopa-social-links{
+        margin-top: 20px;
+    }
+    .kopa-post-review{
+        margin-top: 20px;
+    }
+    .entry-meta{
+        margin-bottom: 15px;
+    }
+    blockquote {
+        font-style: italic;
+    }
+    .kopa-pagination {
+        margin-top: 25px;
+    }
+    .kopa-social-links {
+        margin-top: 20px;
+    }
+    .kopa-divide {
+        width: 100%;
+        height: 1px;
+        background-color: #ededed;
+        margin: 50px 0;
+    }
+    @include max-width(639px) {
+        .info-area > div {
+            widtH: 100%;
+        }
+        .kopa-tag-box {
+            float: left;
+            margin-top: 15px;
+        }        
+    }
+}
+
+.entry-meta{
+    @extend %clearfix;
+    padding: 7px 0;
+    border-top: 1px solid $border-01;
+    border-bottom: 1px solid $border-01;
+    > span, > p {
+        display: inline-block;
+        margin: 0 28px 0 0;
+        @include text_format($fonta, 14px, 20px, $color-body);
+        text-transform: capitalize;
+        i{
+            font-size: 14px;
+            font-style: normal;
+            margin-right: 7px;
+            float: left;
+            margin-top: 3px;
+        }
+        a {
+            color: $color-body;
+            @include a1-hover;
+            &.entry-categories {
+                
+            }
+        }
+    }
+    > p {
+        @include max-width(639px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    > a{
+        display: inline-block;
+        margin-top: 5px;
+        &:hover{
+            span{
+                color: $color-hover;
+            }
+        }
+    }
+}
+
+.info-area{
+    @extend %clearfix;
+    @include list_t(30px, 0, 1px solid $border-01);
+    > div{
+        float: left;
+        width: 50%;
+        min-height: 1px;
+    }
+}
+
+/* kopa-share-post */
+
+.kopa-share-post{
+    margin-top: 30px;
+    > span{
+        float: left;
+        line-height: 45px;
+        margin-right: 15px;
+    }
+}
+
+/* kopa-tag-box */
+
+.kopa-tag-box{
+    float: right;
+    font-size: 14px;
+    margin-top: 30px;
+    @extend %clearfix;
+    span{
+        color: $color-body;
+        position: relative;
+        display: inline-block;
+    }
+    a{
+        font-style: italic;
+        display: inline-block;
+        color: $color-hover;
+        margin-top: 3px;
+        &:hover{
+            color: $color;
+        }
+    }
+}
+
+.single-other-post{
+    margin-top: 30px;
+    border-top: 1px solid $border-01;
+    position: relative;
+    overflow: hidden;
+    > div{
+        > .entry-item{
+            width: 50%;
+            &:before, &:after{
+                display: block;
+            }
+            header{
+                padding: 15px 30px;
+                text-transform: uppercase;
+                background: $bg4;
+                @include max-width(479px) {
+                    text-align: center;
+                    a i {
+                        float: none;
+                        width: 100%;
+                        margin: 0 0 5px 0;
+                    }
+                }
+                a{
+                    color: #353535;
+                    i{
+                        @extend %transition;
+                        font-size: 20px;
+                        color: $color-body;
+                        float: left;
+                        margin: 0 10px 0 0;
+                    }
+                    &:hover {
+                        color: #353535;
+                        i {
+                            color: $color1;
+                        }
+                    }
+                }
+            }
+            .entry-content{
+                padding: 15px 30px;
+                @include max-width(639px) {
+                    padding: 5px 10px;
+                }
+                > a{
+                    text-transform: none;
+                    font-style: italic;
+                    margin-bottom: 5px;
+                    display: block;
+                }
+            }
+        }
+        .prev-post{
+            float: left;
+            border-right: 1px solid $border-01;
+            header{
+                background: $border-01;
+            }
+        }
+        .next-post{
+            float: right;
+            width: 50.04%;
+            text-align: right;
+            border-left: 1px solid $border-01;
+            margin-left: -1px;
+            header{
+                a{
+                    i{
+                        float: right;
+                        margin: 0 0 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.entry-date.style3 > i {
+  margin-right: 5px;
+}
+
+/* kopa-author */
+
+.kopa-author {
+    border: 1px solid $border-01;
+    padding: 20px 22px;
+    position: relative;
+    margin-top: 30px;
+    .author-thumb {
+        width: 93px;
+        height: 93px;
+        border: 1px solid #3a3939;
+        padding: 5px;
+        display: block;
+        float: left;
+        margin-right: 15px;
+        img {
+            width: 100%;
+        }
+    }
+    .author-content{
+        overflow: hidden;
+        @include max-width(479px) {
+            float: left;
+            margin-top: 10px;
+        }
+        > header{
+            @include list_b(5px, 5px, 1px solid $border-01);
+            .author-name {
+                text-transform: none;
+                margin-bottom: 0;
+                a {
+                    font: 14px $font2;
+                    color: $color-heading;
+                    &:hover {                        
+                        color: $color1;                        
+                    }
+                }
+            }
+            .author-job {
+                text-transform: uppercase;
+            }
+        }
+    }
+    .author-social-link {
+        width: 165px;
+        position: absolute;
+        top: 20px;
+        right: 22px;
+        @include max-width(479px) {
+            width: 50%;
+        }
+        > div > span {
+            float: left;
+            margin-right: 10px;
+            line-height: 30px;
+            color: $color-heading;
+        }
+        .social-filter {
+            position: relative;
+            float: left;
+            > div {
+                border: 1px solid $border-01;
+                background: #fff;
+                padding: 3px 10px;
+                width: 63px;
+                > a {
+                    display: block;
+                    float: left;
+                    width: 24px;
+                    height: 24px;                   
+                    border-radius: 50%;
+                    color: $color1;
+                    text-align: center;
+                    line-height: 24px;
+                    font-size: 14px;
+                    margin-right: 8px;
+                    &:hover{
+                        color: #fff;
+                        background: $color1;
+                    }
+                }
+                > span {
+                    float: left;
+                    font-size: 15px;
+                    cursor: pointer;
+                    margin-top: 2px;
+                }
+            }
+            ul {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 28px;
+                width: 63px;
+                background: #fff;
+                border: 1px solid $border-01;
+                border-top: none;
+                font-style: normal;
+                z-index: 999;
+                li {
+                    @extend %transition;
+                    display: block;
+                    width: 24px;
+                    height: 24px;                    
+                    border-radius: 50%;
+                    color: $color1;
+                    text-align: center;
+                    line-height: 24px;
+                    font-size: 14px;
+                    margin: 8px 0 3px 10px;
+                    cursor: pointer;
+                    a {
+                        color: $color1;
+                    }
+                    &:hover{
+                        background: $color1;
+                        a {
+                            color: #fff;
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+
+/* comments */
+
+#comments {
+    margin-top: 30px;
+    .comments-list {
+        margin-bottom: -20px;
+        @extend %clearfix;
+        .comment {
+            @extend %clearfix;
+            list-style: none;
+            @include list_b(25px, 25px, 1px solid $border-01);
+            .comment-wrap {
+                @extend %clearfix;
+                .comment-avatar {
+                    float: left;
+                    width: 93px;
+                    border: 1px solid #343434;
+                    padding: 5px;
+                    margin-right: 15px;
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .media-body {
+                    > header {
+                        margin-bottom: 8px;
+                        .pull-left {
+                            h6 {
+                                font-family: $font2;
+                                color: $color-heading;
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                margin-bottom: 0;
+                            }
+                            span {
+                                color: $color2;
+                            }
+                        }
+                        .pull-right{
+                            font-family: $font2;
+                            color: #8e8e8e;
+                            font-size: 12px;
+                            line-height: 20px;
+                            text-transform: capitalize;
+                            font-weight: 400;
+                            a{
+                                color: $color-hover;
+                                &:hover{
+                                    color: $color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .children {
+            .comment {
+                margin-left: 108px;
+                @include list_b(0, 0, none);
+                @include list_t(25px, 25px, 1px solid $border-01);
+                @include max-width(639px) {
+                    margin-left: 30px;
+                }
+                &:first-child{
+                    margin-left: 0;
+                    padding-left: 108px;
+                    @include max-width(639px) {
+                        padding-left: 30px;
+                    }
+                }
+                .comment-wrap {
+                    .comment-avatar {
+                        width: 69px;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+/*--- kopa purchase 1 widget ---*/
+.kopa-purchase-1-widget {
+    padding: 55px 0;
+    margin: 0!important;
+    .wrapper {
+        position: relative;
+    }
+    p {
+        font: 30px/46px $font2;
+        color: #fff;
+        margin: 0;
+        span {
+            color: #fff600;
+        }
+    }
+    .kopa-button {
+        position: absolute;
+        right: 75px;
+        top: 55px;
+        padding: 0 23px;        
+    }
+}
+
+.kopa-purchase-1-widget.style2 {
+    padding: 60px 0;
+}
+
+/*--- kopa purchase 2 widget ---*/
+.kopa-purchase-2-widget {
+    padding-left: 60px;   
+    @include max-width(1023px) {
+        padding-left: 0;
+    }
+    @include between-width(768px, 799px) {
+        margin-left: -25px;
+    }
+    @include max-width(639px) {
+        margin-bottom: 117px
+    }
+    .widget-title {
+        font: bold 50px/55px $font1;
+        color: #fff;
+        margin-bottom: 10px;
+        text-transform: none;  
+        margin-bottom: 20px;          
+    }
+    p {
+        font: italic 14px/22px $font2;
+        color: #939393;
+        margin-bottom: 20px;
+    }
+    
+    .kopa-button {
+        float: left;
+        text-align: center;
+        width: 168px;
+        margin-right: 8px;
+        @include max-width(479px) {
+            width: 140px;
+        }
+    }
+    .read-more {
+        background-color: $color;
+        &:hover {
+            background-color: #171717;
+        }
+    }
+    .purchase {
+        background-color: #171717;
+        &:hover {
+            background-color: $color;
+        }
+    }
+}
+
+
+.kopa-purchase-1-widget {
+    @include max-width(1023px) {
+        p {
+          width: 60%;
+          padding-left: 30px;
+          text-align: center;
+        }
+        .kopa-button {
+            top: 90px;
+        }
+    }
+    @include max-width(767px) {
+        text-align: center;
+        p {
+          width: 80%;
+          margin: 0 auto;
+          padding: 0;   
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .kopa-button {
+            position: static; 
+            display: inline-block;          
+        }
+    }
+    @include max-width(479px) {
+        p {
+          width: 100%;
+        }
+    }
+}

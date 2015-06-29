@@ -1,0 +1,92 @@
+/*--- top products ---*/
+%rating{
+	position:absolute;
+	top:0;
+	color:$color1;
+	font-size:12px;
+}
+
+.widget_top_rated_products{
+	ul.product_list_widget{
+		list-style:none;
+		margin:0;
+		padding:0;
+		li{
+			@include clearfix;
+			&:hover{
+				&:before{
+					background:$color1;
+				}
+			}
+			&:after{
+				display:table;
+				content:"";
+				clear:both;
+			}
+			position:relative;
+			padding:15px 0;
+			border-bottom:1px solid #ededed;
+			&:last-child {
+				border: none;
+			}
+			a{
+				img{
+					float:left;
+					margin:0;
+					width:76px;
+				}
+				.product-title{
+					display:block;
+					font-size:14px;
+					color:#353535;
+					line-height:20px;
+					overflow:hidden;
+					padding:0 0 0 13px;
+					@include transition(0.3s);
+					font-family:$fonta;
+					&:hover{
+						color:$color1;
+					}
+				}
+			}
+			.star-rating{
+				position:relative;
+				top:4px;
+				margin:0 0 5px;
+				width:63px;
+				height:13px;
+				overflow:hidden;
+				left:13px;
+				float:none;
+				&:before{
+					@extend %rating;
+					left:0;
+				}
+				span{
+					width:80%;
+					position:absolute;
+					overflow:hidden;
+					padding-top:15px;
+					&:before{
+						left:0;
+						@extend %rating;
+					}
+					strong{
+						display:none;
+					}
+				}
+			}
+			.amount{
+				display:block;
+				overflow:hidden;
+				padding:0 0 0 13px;
+				font-size:14px;
+				line-height:21px;
+				color:#8e8e8e;
+			}
+			ins{
+				text-decoration:none;
+			}			
+		}
+	}	
+}

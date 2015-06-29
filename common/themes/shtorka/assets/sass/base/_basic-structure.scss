@@ -1,0 +1,234 @@
+/**
+ * 1.4 Basic structure
+ * -------------------------------------------------------------------
+ */
+html{
+    overflow-x: hidden;
+}
+body {
+    font-family: $font2;
+    background: #fff;
+    color: $color-body;
+    font-size: 14px;
+    line-height: 22px;
+    overflow: hidden;
+}
+.mb-5 {
+    margin-bottom: 5px;
+    @extend %clearfix;
+}
+.mb-10 {
+    margin-bottom: 10px;
+    @extend %clearfix;
+}
+.mb-20 {
+    margin-bottom: 20px;
+    @extend %clearfix;
+}
+.mb-30 {
+    margin-bottom: 30px;
+    @extend %clearfix;
+}
+.mb-40 {
+    margin-bottom: 40px;
+    @extend %clearfix;
+}
+.mb-50 {
+    margin-bottom: 50px;
+    @extend %clearfix;
+}
+.mb-60 {
+    margin-bottom: 60px;
+    @extend %clearfix;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+.pt-70 {
+    padding-top: 70px;
+}
+.pd-20{
+    padding: 20px;
+    @extend %clearfix;
+    position: relative;
+}
+.pb-17 {
+    padding-bottom: 17px;
+}
+.pr-50 {
+    padding-right: 50px;    
+}
+.pl-50 {
+    padding-left: 50px;
+}
+
+.wrapper {
+    width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    @extend %clearfix;
+}
+
+.kopa-logo{
+    img{
+        max-width: 100%;
+    }
+}
+
+iframe{
+    width: 100%;
+    border: none;
+}
+label{
+    font-weight: 400;
+}
+textarea{
+    overflow: auto;
+    resize: vertical !important;
+}
+
+
+/*
+ * --------------------------------------------------
+ * WORDPRESS REQUIRED BY THEME-CHECK
+ * --------------------------------------------------
+ */
+
+.wp-caption{
+    font-size: inherit;
+    max-width: 100%;
+}
+.wp-caption-text{
+    font-size: inherit;
+}
+.sticky{
+    font-size: inherit;
+}
+.gallery-caption{
+    font-size: inherit;
+}
+.bypostauthor{
+    font-size: inherit;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.alignnone{
+    max-width: 100%;
+}
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 10px;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bg-white{
+    background: #fff;
+}
+
+.kopa-hotline{
+    text-transform: uppercase;
+    p{
+        margin-bottom: 0;
+    }
+}
+.kopa-user{
+    float: left;
+    position: relative;
+    z-index: 9;
+    @extend %list_reset;
+    ul{
+        @extend %list_format;
+        li{
+            float: left;
+            color: #666;
+        }
+    }
+}
+
+
+/*--- page-links ---*/      
+
+.page-links{
+    margin: 0 -5px 0 0;
+    a{
+        margin: 0 5px 5px;
+        font-weight: 600;
+        &:first-child{
+            margin-left: 8px;
+        }
+    }
+}
+
+@include max-width(639px) {
+    .pt-70 {
+        padding-top: 30px;
+    }
+    .widget {
+        margin-bottom: 50px;
+    }
+}
+
+
+@include max-width(799px) {
+    .pr-50 {
+        padding-right: 0;
+    }
+    .pl-50 {
+        padding-left: 0;
+    }
+    .kopa-about-1-widget, .kopa-about-2-widget {
+        width: 80%;
+        margin: 0 auto 70px;
+    }
+}
+
+@include max-width(479px) {
+    .pr-50 {
+        padding-right: 15px;
+    }
+    .pl-50 {
+        padding-left: 15px;
+    }
+    .kopa-about-1-widget, .kopa-about-2-widget {
+        width: 80%;
+        margin: 0 auto 70px;
+    }
+}
+
+/*--- Wrapper Responsive ---*/
+.wrapper {    
+    @include max-width(1119px) {
+        width: 980px;
+    }
+    @include max-width(1023px) {
+        width: 960px;
+    }
+    @include max-width(979px) {
+        width: 780px;
+    }
+    @include max-width(799px) {
+        width: 740px;
+    }
+    @include max-width(767px) {
+        width: 620px;
+    }
+    @include max-width(639px) {
+        width: 440px;
+    }
+    @include max-width(479px) {
+        width: 300px;
+        padding: 0;
+    }   
+}

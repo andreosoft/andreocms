@@ -1,0 +1,69 @@
+/*--- Loading ---*/
+.loading {    
+    width: 100%; 
+    z-index: 9;
+    background: rgba(255,255,255, 0.9) url(images/icons/loading-1.gif) no-repeat center center; 
+}
+
+/*--- Home 1 Carousel ---*/
+#kopa-header .loading {
+    height: 647px;
+    @include max-width(1119px) {
+        height: 491px;
+    }
+    @include max-width(1023px) {
+        height: 470px;
+    }
+    @include max-width(979px) {
+        height: 384px;
+    }
+    @include max-width(799px) {
+        height: 368px;
+    }
+    @include max-width(767px) {
+        height: 307px;
+    }
+    @include max-width(639px) {
+        height: 230px;
+    }
+    @include max-width(479px) {
+        height: 172px;
+    }   
+    @include max-width(359px) {
+        height: 153px;
+    }  
+}
+
+/*--- Home 2 Carousel ---*/
+.home-top-carousel-2-wrapper.loading {
+    height: 635px;
+    @include max-width(1023px) {
+        height: 462px;
+    }
+    @include max-width(799px) {
+        height: 724px;
+    }
+    @include max-width(639px) {
+        height: 453px;
+    }
+    @include max-width(479px) {
+        height: 679px;
+    }
+}
+
+/*--- Blog Carousel ---*/
+.owl-blog-carousel-2-wrapper.loading {
+    height: 407px;
+    @include max-width(1023px) {
+        height: 520px;
+    }
+    @include max-width(799px) {
+        height: 397px;
+    }
+    @include max-width(639px) {
+        height: 491px;
+    }
+    @include max-width(479px) {
+        height: 335px;
+    }
+}

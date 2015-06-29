@@ -1,0 +1,32 @@
+/*--- kopa service widget ---*/
+.kopa-service-widget {
+    margin-bottom: 40px;
+    .row > div {
+        margin-bottom: 50px;
+    }
+    .service-icon {
+        float: left;
+        width: 80px;
+        margin-right: 20px; 
+        a {
+            display: block;            
+            @extend %link-hover;    
+            i:before {
+                @extend %transition;
+                color: #fff;
+                font-size: 80px;
+            }
+        }       
+    }
+    .service-content {
+        overflow: hidden;
+        .service-title {
+            a {
+                font: 500 18px/24px $font2;
+                color: #fff;
+                @extend %link-hover;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

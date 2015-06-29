@@ -1,0 +1,226 @@
+/*--- kopa feature widget ---*/
+
+@mixin feature-setting($height, $font-size, $icon-pos, $top) {
+    .feature-icon {
+      width: $height/2;
+      height: $height;
+      top: $top;
+      i {
+        font-size: $font-size;
+      }
+    }
+    &.item-left .feature-icon i {
+      right: $icon-pos;
+    }
+    &.item-right .feature-icon i {
+      left: $icon-pos;
+    }
+}
+
+.kopa-feature-widget {
+    margin-bottom: 67px;
+    .feature-item-wrapper {
+        width: 446px;
+        height: 160px;
+        position: relative;        
+        .feature-icon {
+            position: absolute;
+            width: 63px;
+            height: 126px;
+            background-color: $color1;          
+            top: 18px;
+            i {
+                position: absolute;
+                font-size: 30px;
+                line-height: 30px;              
+                height: 30px;
+                top: 50%;
+                margin-top: -15px;  
+                color: #fff;
+            }           
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 23px;
+            top: 100%;
+            left: 0;
+        }
+        &.item-left {
+            float: right;
+            .feature-icon {
+                border-radius: 126px 0 0 126px;
+                right: 100%;
+                i {
+                    right: 15px;
+                }
+            }       
+            .feature-content-wrapper {
+                padding-left: 40px;
+                text-align: left;
+            }
+            &:after {
+                background: url(images/background/feature-shadow-1.png) no-repeat;
+            }
+        }
+        &.item-right {
+            float: left;
+            .feature-icon {
+                border-radius: 0 126px 126px 0;
+                left: 100%;
+                i {
+                    left: 15px;
+                }
+            }   
+            .feature-content-wrapper {
+                padding-right: 30px;
+                text-align: right;
+            }
+            &:after {
+                background: url(images/background/feature-shadow-2.png) no-repeat;
+            }
+        }
+    }
+    .feature-item {     
+        width: 100%;
+        height: 100%;
+        border: none;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .mask {
+            @extend %transition;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: 3px solid transparent;
+        }
+        &:hover .mask {
+            border-color: $color1;          
+        }   
+        .feature-content-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 45px;          
+            .feature-title {
+                color: #555;
+                margin-bottom: 10px;
+                text-transform: uppercase;  
+            }
+            .feature-content {
+                font: 700 50px/60px $font2;
+                color: #484848;
+                text-transform: uppercase; 
+                @include max-width(1023px) {
+                    font-size: 35px;
+                    line-height: 40px;
+                }
+            }       
+        }   
+    }
+
+}
+
+
+
+
+.kopa-feature-widget {
+    .feature-item-wrapper {
+        @include max-width(1023px) {        
+            width: 85%;
+            height: auto;            
+            @include feature-setting(90px, 30px, 9px, 22px);
+        }
+    }
+    
+    @include max-width(979px) {
+        .feature-item-wrapper.item-left .feature-content-wrapper {
+            padding-left: 20px;
+        }
+        .feature-item-wrapper.item-right .feature-content-wrapper {
+            padding-right: 20px;
+        }
+        .feature-item-wrapper {
+            .feature-item .feature-content-wrapper {
+                padding-top: 20px;
+                .feature-content {
+                    font-size: 35px;
+                    line-height: 40px;
+                }
+            }
+            @include feature-setting(70px, 20px, 7px, 18px); 
+        }
+    }
+    @include max-width(767px) {
+        .feature-item-wrapper.item-left .feature-content-wrapper {
+            padding-left: 30px;
+        }
+        .feature-item-wrapper.item-right .feature-content-wrapper {
+            padding-right: 30px;
+        }
+        .feature-item-wrapper {
+            margin-bottom: 40px;
+            .feature-item .feature-content-wrapper {
+                padding-top: 40px;
+                .feature-content {
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+            @include feature-setting(126px, 35px, 10px, 18px);            
+        }
+    }
+    @include max-width(767px) {
+        .feature-item-wrapper.item-left .feature-content-wrapper {
+            padding-left: 30px;
+        }
+        .feature-item-wrapper.item-right .feature-content-wrapper {
+            padding-right: 30px;
+        }
+        .feature-item-wrapper {
+            margin-bottom: 40px;
+            .feature-item .feature-content-wrapper {
+                padding-top: 30px;
+                .feature-content {
+                    font-size: 35px;
+                    line-height: 40px;
+                }
+            }
+            @include feature-setting(88px, 30px, 9px, 18px);            
+        }
+    }
+
+    @include max-width(479px) {
+        .feature-item-wrapper.item-left .feature-content-wrapper {
+            padding-left: 20px;
+        }
+        .feature-item-wrapper.item-right .feature-content-wrapper {
+            padding-right: 20px;
+        }
+        .feature-item-wrapper {
+            margin-bottom: 20px;
+            .feature-item .feature-content-wrapper {
+                padding-top: 13px;
+                .feature-content {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+            @include feature-setting(62px, 20px, 7px, 18px);   
+            .feature-icon {
+                top: 10px;
+            }         
+        }
+    }
+}
+
+
+

@@ -1,0 +1,55 @@
+/**
+ * 4. - Footer 
+ * -------------------------------------------------------------------
+ */
+
+#kopa-footer {
+    background-color: $color;
+    padding: 24px 0;
+    text-align: center;
+    position: relative;
+    .copyright {
+        color: #fff;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+/*----- Back to top -----*/
+.back-to-top {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    &:hover {
+        cursor: pointer;
+        &:after {
+            @include before-top(20px, 20px, 20px, #171717);
+        }
+        span {
+            color: #171717;         
+        }
+    }
+    &:before {
+        @include before-top(60px, 60px,60px, $color);
+        bottom: 0;
+        left: 0;
+    }
+    &:after {   
+        @extend %transition;
+        @include before-top(20px, 20px, 20px, #f5cdd8);
+        bottom: 25px;
+        left: 40px;
+    }
+    span {
+        @extend %transition;
+        font: bold 16px arial;
+        text-transform: uppercase;
+        color: #fff;
+        z-index: 3;
+        position: relative;
+        top: 65%;
+    }
+}

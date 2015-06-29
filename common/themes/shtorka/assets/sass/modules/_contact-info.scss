@@ -1,0 +1,124 @@
+/*--- kopa contact info widget ---*/
+.kopa-contact-info-widget {
+    padding-top: 20px;
+    margin-bottom: 90px;
+    @include max-width(479px) {
+        margin-bottom: 50px;
+    }
+    footer {
+        margin-bottom: 25px;
+    }
+    .phone {
+        margin-bottom: 20px;
+        i {
+            font-size: 18px;
+            line-height: 20px;
+            color: #fff;
+            margin-right: 10px;
+        }
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 24px;
+        font-weight: 400;
+        span {
+            font: 600 20px/24px $font2;
+            color: $color;
+        }
+    }
+    .address, .email {
+        float: left;
+        width: 49.9%;
+        padding-top: 30px;
+        @include max-width(639px) {
+            width: 80%;
+            margin-left: 10%;   
+        }
+        i {
+            width: 60px;
+            display: inline-block;
+            height: 36px;
+            line-height: 36px;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        .title {
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+    }
+    .divider-2 {
+        float: left;
+        @include opacity(.5);
+        @include max-width(639px) {
+            display: none;
+        }
+    }
+    .address {      
+        i {
+            float:right;
+            margin-left: 15px;
+            border-left: 1px solid rgba(255, 255, 255, .1);
+            @include max-width(639px) {
+                float: left;
+                border-left: none;
+                margin-left: 0;
+                margin-right: 15px;
+                border-right: 1px solid rgba(255, 255, 255, .1);
+            }
+        }
+        .content {
+            text-align: right;
+            @include max-width(639px) {
+                text-align: left;
+                overflow: hidden;
+            }
+        }        
+    }
+    .email {        
+        i {         
+            float: left;
+            margin-right: 15px; 
+            border-right: 1px solid rgba(255, 255, 255, .1);
+        }
+        .content {
+            text-align: left;
+            .info a {
+                color: #898989;
+                @extend %link-hover;
+            }
+        }
+    }
+    .kopa-social-links {
+        ul {
+            display: inline-block;
+        }
+        li {
+            @extend %transition;
+            float: left;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            margin: 0 7px;
+            border: 1px solid rgba(216, 216, 216, .1);
+            background-color: rgba(170, 170, 170, .1);
+            @include max-width(639px) {
+                margin-bottom: 10px;
+            }
+            a {
+                font-size: 16px;
+                line-height: 44px;
+                color: #8f8f8f;
+            }
+            &:hover {
+                border-color: $color;
+                background-color: $color;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

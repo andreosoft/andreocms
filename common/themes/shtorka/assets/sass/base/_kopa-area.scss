@@ -1,0 +1,359 @@
+/*--- kopa-area ---*/
+.kopa-area {
+    @extend %clearfix;
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;  
+    @include max-width(1119px) {
+        padding-top: 70px;
+    }
+    @include max-width(479px) {
+        padding-top: 50px;
+    }  
+}
+
+.span-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;    
+}
+
+.kopa-area-1 {
+    padding-top: 70px;
+}
+
+.kopa-area-2 {
+    background: url("http://placehold.it/1366x297");   
+    background-size: cover;     
+    .span-bg {
+        background: rgba(18, 18, 18, 0.9);  
+    }    
+}
+
+.kopa-area-3 {
+    background: url("http://placehold.it/1366x555");   
+    height: 555px;
+    background-size: cover; 
+    overflow: hidden;    
+    .span-bg {
+        background: rgba(228, 229, 233, 0.9);
+    }
+    .ab-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        @include max-width(1023px) {
+            right: -125px;
+        }
+        @include max-width(799px) {
+            right: -245px;
+        }  
+        @include max-width(639px) {
+            display: none;
+        }        
+    }
+    .wrapper {
+        position: relative;
+        z-index: 5;
+    }
+    @include between-width(768px, 799px) {
+        .col-sm-6 {
+            width: 55%;
+        }
+    }   
+}
+
+.kopa-area-4 {
+    padding-top: 100px;    
+    background: url("http://placehold.it/1366x776");   
+    background-size: cover; 
+    .span-bg {
+        background: rgba(18, 18, 18, 0.85);        
+    }
+}
+
+.kopa-area-5 {
+    background-color: $color;
+    padding: 0;
+}
+
+.kopa-area-6 {
+    padding-bottom: 17px;
+    background: url("http://placehold.it/1366x775");   
+    background-size: cover; 
+    &.s2 {
+        padding-top: 100px;
+    }
+    .span-bg {
+        background: rgba(18, 18, 18, 0.85);
+    }
+}
+
+.kopa-area-7 {    
+    background: url("http://placehold.it/1366x732");   
+    background-size: cover; 
+    .span-bg {
+        background: rgba(239, 239, 239, 0.9);
+    }
+}
+
+.kopa-area-8 {
+    padding-top: 0;     
+    height: 603px;
+    overflow: hidden;
+    .span-bg {
+        background: rgba(23, 23, 23, 0.85);
+        z-index: 9999;
+    }
+    .top-left-corner {
+        width: 37.5%;
+    }
+    #video_bg1 {
+        top: 0!important;
+    }
+}
+
+.kopa-area-9 {
+    padding-top: 70px;
+    background-image: url("http://placehold.it/1366x202"); 
+    background-size: cover; 
+    .span-bg { 
+        background-color: $color1;       
+        @include opacity(.7);    
+    }
+}
+
+.kopa-area-10 {
+    padding-bottom: 17px;
+    background: url("http://placehold.it/1366x535");   
+    background-size: cover; 
+    background-attachment: fixed;
+    .span-bg {
+        background: rgba(23, 23, 23, 0.9);
+    }
+    @include between-width (980px, 1023px) {
+        .pr-50 {
+            padding-right: 0;            
+        }
+        .pl-50 {
+            padding-left: 0;
+        }
+    }
+    @include  between-width(800px, 1023px) {
+        .col-sm-12 {
+            width: 50%;
+            padding: 0 15px;             
+        }        
+    }    
+}
+
+.kopa-area-11 {
+    background: url("http://placehold.it/1366x732");   
+    background-size: cover; 
+    .span-bg {
+        background: rgba(239, 239, 239, 0.9);
+    }
+}
+
+.kopa-area-12 {
+    padding-top: 117px;
+    @include between-width(768px, 799px) {
+        padding-top: 70px;
+    }
+    @include max-width(639px) {
+        height: auto;
+    }  
+    height: 440px;
+    overflow: hidden;
+    background: url("http://placehold.it/1366x441");   
+    background-size: cover; 
+    .span-bg {
+        background: rgba(23, 23, 23, 0.8);
+    }
+    .ab-bg {
+        position: absolute;
+        top: 0;
+        left: 100px;
+        z-index: 3;
+        @include max-width(1023px) {
+            left: -200px;
+        }
+        @include max-width(799px) {
+            left: -305px;
+        }
+        @include max-width(639px) {
+            display: none;
+        }        
+    }
+    .top-left-corner {
+        width: 37.5%;
+    }
+}
+
+.kopa-area-13 {    
+    padding-bottom: 14px;
+    background: url("http://placehold.it/1366x825");   
+    background-size: cover; 
+    .span-bg {
+        background: rgba(239, 239, 239, 0.8);
+    }
+    .bottom-right-corner {
+        width: 576px; 
+        height: 14px;        
+        &:before {
+            @include before-left(14px, 0, 14px, $color);
+            right: 100%;
+            bottom: 0;
+        }
+    }
+
+    .bottom-left-corner {        
+        width: 576px; 
+        height: 14px;
+        &:before {
+            @include before-right(14px, 0, 14px, $color);            
+        }
+    }
+}
+
+.kopa-area-14 {
+    position: relative;
+    background: url("http://placehold.it/1366x603");   
+    padding-top: 67px;    
+    background-size: cover;    
+    .span-bg {
+        background: rgba(228, 229, 233, 0.9);
+    }
+}
+
+.kopa-area-15 {
+    position: relative;
+    background: url("http://placehold.it/1366x297"); 
+    background-size: cover;    
+    .span-bg {
+        background: rgba(255, 255, 255, 0.85);
+    }
+}
+
+.kopa-area-16 {
+    background: url("http://placehold.it/1366x441.jpg");
+    position: relative;
+    padding-bottom: 14px;
+    background-size: cover;
+    .span-bg {
+        background: rgba(206, 3, 61, 0.85);
+    }
+}
+
+.kopa-area-18 {
+    background-color: #f6f6f6;
+}
+
+.kopa-area-19 {
+    background: url("http://placehold.it/1366x555"); 
+    background-size: cover;    
+    .span-bg {
+        background: rgba(228, 229, 233, 0.9);
+    }
+}
+
+.kopa-area-20 { 
+    position: relative;
+    padding-top: 45px;
+    background: url("http://placehold.it/1366x297");   
+    background-size: cover;     
+    .span-bg {
+        background: rgba(255, 255, 255, 0.9);
+    }    
+}
+
+.top-line {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 3px;
+    background-color: $color;
+    left: 0;
+    top: 0;
+}
+
+.bottom-line {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 3px;
+    background-color: $color;
+    left: 0;
+    bottom: 0;
+}
+
+.top-left-corner {
+    position: absolute;
+    z-index: 9999;
+    width: 26.7%; //360px/1366px
+    height: 17px;
+    background-color: $color;
+    left: 0;
+    top: 0;   
+    &:before {
+        @include before-right(0, 17px, 17px, $color);
+        left: 100%;
+        top: 0;
+    }
+}
+
+.bottom-right-corner {
+    position: absolute;
+    z-index: 9999;
+    width: 37.5%; // 506px/1366px
+    height: 17px;
+    background-color: $color;
+    right: 0;
+    bottom: 0;
+    &:before {
+        @include before-left(17px, 0, 17px, $color);
+        right: 100%;
+        bottom: 0;
+    }
+}
+
+.bottom-left-corner {
+    position: absolute;
+    z-index: 9999;
+    width: 37.5%; // 506px/1366px
+    height: 17px;
+    background-color: $color;
+    left: 0;
+    bottom: 0;
+    &:before {
+        @include before-right(17px, 0, 17px, $color);
+        left: 100%;
+        bottom: 0;
+    }
+}
+
+/*--- bottom center white line ---*/
+.bc-white-line {
+    position: absolute;
+    z-index: 9999;
+    background-color: #f6f6f6;
+    width: 324px;
+    height: 14px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -162px;
+    &:before {
+        @include before-left(14px, 0, 14px, #f6f6f6);
+        right: 100%;
+        bottom: 0;        
+    }
+    &:after {
+        @include before-right(14px, 0, 14px, #f6f6f6);
+        left: 100%;
+        bottom: 0;
+    }
+}

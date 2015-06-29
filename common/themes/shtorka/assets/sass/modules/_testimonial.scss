@@ -1,0 +1,177 @@
+/*--- kopa testimonial widget ---*/
+.kopa-testimonial-widget {
+    padding-left: 70px;
+    margin-bottom: 0;
+    @include max-width(1023px) {
+        padding-left: 0;
+        margin-left: 30px;
+    }    
+    @include max-width(639px) {
+        margin-left: 0px;
+    }   
+    .entry-name {
+        font: bold 55px/65px $font1;
+        color: #292929;
+        text-transform: none;
+        margin-bottom: 5px;
+        span {
+            color: $color;
+        }  
+        @include max-width(479px) {
+            font-size: 45px;
+            line-height: 50px;
+        }
+    }
+    p.job {
+        text-align: right;
+        margin-right: 125px;
+        margin-bottom: 40px;
+        span {
+            font: 16px/24px $font2;
+            display: inline-block;
+            color: #0d0d0d;
+            text-transform: uppercase;
+            position: relative;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                width: 32px;
+                height: 1px;
+                background-color: $color;
+                bottom: 7px;
+            }
+            &:before {
+                left: -42px;
+            }
+            &:after {
+                right: -42px;
+            }
+        }
+    }
+    .kopa-quotes {
+        font: 300 italic 16px/30px $font2;
+        color: #494949;
+        position: relative;
+        width: 430px;
+        padding-left: 50px;        
+        padding-bottom: 10px;
+        &:before, &:after {
+            position: absolute;
+            @extend %fa;
+            color: $color;
+            font-size: 26px;
+        }
+        &:before {
+            content: "\f10d";
+            top: 0;
+            left: 0px;
+        }
+        &:after {
+            content: "\f10e";
+            bottom: 0px;
+            right: -10px;
+            @include max-width(1023px) {
+                right: 0;
+            }
+        }
+        @include max-width(1023px) {
+            width: auto;
+        }
+    }
+    .owl-theme .owl-controls {
+        margin-top: 50px;
+    }
+    .owl-theme .owl-controls .owl-page {    
+        &.active, &:hover {
+            span {                        
+                background-color: $color;
+            }
+        }
+        span {          
+            @extend %transition;            
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            background-color: #b8b8b9;
+            opacity: 1;
+            filter: Alpha(Opacity=100);
+        }
+    }  
+}
+
+
+/*--- kopa testimonial 2 widget ---*/
+.kopa-testimonial-2-widget {
+    margin-bottom: 100px;
+    header {
+        margin-bottom: 55px;
+    }
+    @include min-width(1200px) {
+        > .row {
+            margin-left: -50px;
+            margin-right: -50px;
+        }
+        .item {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+    .entry-item {
+        text-align: center;        
+        .entry-thumb {
+            @include transition(.5s);
+            width: 174px;
+            height: 174px;
+            margin: 0 auto 25px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            &:hover {
+                border-color: $color1; 
+            }
+        }
+        .entry-title {            
+            margin-bottom: 10px;
+            a {
+                font: 400 35px/45px $font1;
+                color: $color2;
+                span {
+                    color: $color1;
+                }
+                &:hover {
+                    color: $color1;
+                }
+            }            
+        }
+        .entry-content {
+            margin-bottom: 70px;
+            padding: 0 25px;
+            .job {
+                font-size: 15px;
+                display: inline-block;
+                color: #0d0d0d;
+                text-transform: uppercase;
+                font-style: italic;
+                margin-bottom: 25px;
+                position: relative;
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 1px;
+                    background-color: $color1;
+                    bottom: 6px;                
+                    left: -35px;
+                }
+                &:after {
+                    left: auto;
+                    right: -35px;
+                }
+
+            }
+        }
+    }    
+} 

@@ -1,0 +1,21 @@
+/*--- Kopa ads widget ---*/
+.kopa-ads-widget {
+    margin-bottom: 20px!important;
+    padding-top: 25px;    
+    div.item {
+        text-align: center;
+        padding: 0 10px;
+    }
+    img{
+        @extend %transition;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        &:hover{
+            -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        }
+        display: inline-block;        
+    }
+}
+
+
