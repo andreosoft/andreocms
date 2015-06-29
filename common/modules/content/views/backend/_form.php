@@ -9,7 +9,7 @@ use common\widgets\dataPicker\DatePicker;
 use andreosoft\summernote\Summernote;
 
 use common\modules\filemanager\widgets\Image;
-use common\modules\content\models\Content;
+use common\modules\content\models\backend\Content;
 use yii\grid\CheckboxColumn;
 use common\themes\admin\widgets\GridView;
 use common\modules\comments\models\CommentsSearch;
@@ -53,6 +53,7 @@ Tabs::widget([
 //                $form->field($model, 'parent')->dropDownList(ArrayHelper::map(Content::find()->where(['isparent' => '1'])->all(), 'id', 'name')).
                 $form->field($model, 'tag')->textInput(['maxlength' => 255]).
                 $form->field($model, 'image')->widget(Image::className())
+            
         ],        
         [
             'label' => \Yii::t('content/main', 'Seo'),
@@ -67,7 +68,8 @@ Tabs::widget([
             'content' =>
                 $form->field($model, 'status')->dropDownList(Content::getStatusArray()).
                 $form->field($model, 'publishedondate')->widget(DatePicker::className()).
-                $form->field($model, 'publishedontime')->textInput()
+                $form->field($model, 'publishedontime')->textInput().
+                $form->field($model, 'template')->textInput(['maxlength' => 255])
         ], 
         [
             'label' => 'Comments',
@@ -75,7 +77,7 @@ Tabs::widget([
             isset($model->id) ?
                 \common\themes\admin\widgets\GridViewEdited::widget([
                     'dataProvider' => (new CommentsSearch())->search(['CommentsSearch' => ['table_name' => 'content', 'table_id' => $model->id]]),
-                    'actionUpdate' => Url::to(['/comments/admin/update']),
+                    'actionUpdate' => Url::to(['/comments/backend/update']),
                     'createModel' => new \common\modules\comments\models\Comments,
                     'defaultValue' => [
                         'Comments[table_id]' => $model->id,
@@ -94,7 +96,7 @@ Tabs::widget([
                             [
                                 'class' => \common\themes\admin\widgets\ActionColumn::className(),
                                 'template' => '{delete}',
-                                'controller' => '/comments/admin',
+                                'controller' => '/comments/backend',
                             ],                                
                     ],
                 ]) :
@@ -111,7 +113,7 @@ Tabs::widget([
             isset($model->id) ?
                     \common\themes\admin\widgets\GridViewEdited::widget([
                         'dataProvider' => (new \common\modules\gallery\models\GallerySearch())->search(['GallerySearch' => ['table_name' => $model->tableName(), 'table_id' => $model->id]]),
-                        'actionUpdate' => Url::to(['/gallery/admin/update']),
+                        'actionUpdate' => Url::to(['/gallery/backend/update']),
                         'createModel' => new \common\modules\gallery\models\Gallery,
                         'defaultValue' => [
                             'Gallery[table_id]' => $model->id,
@@ -132,7 +134,7 @@ Tabs::widget([
                             [
                                 'class' => \common\themes\admin\widgets\ActionColumn::className(),
                                 'template' => '{delete}',
-                                'controller' => '/gallery/admin',
+                                'controller' => '/gallery/backend',
                             ],
                         ],
                 ]) :

@@ -31,4 +31,4 @@ $this->registerLinkTag(
 ?>
 
 <meta name="author" content="PxDesign">
-<link type="ico" rel="shortcut icon" href="favicon.ico">
+<link type="ico" rel="shortcut icon" href="/favicon.ico">

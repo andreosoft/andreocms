@@ -47,7 +47,7 @@ class BackendController extends Controller {
                 $ajax = Yii::$app->request->post('ajax');
                 $searchModel = new ContentSearch();
                 $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-                
+
                 if ($ajax) {
                     return $this->renderAjax($render, [
                                 'searchModel' => $searchModel,
@@ -84,11 +84,10 @@ class BackendController extends Controller {
             public function actionCreate() {
                 $model = new Content();
                 if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                    return $this->redirect(['index', 'class' => $model->class]);
+//                    return $this->redirect(['index', 'class' => $model->class]);
+                    return $this->redirect(['update', 'id' => $model->id]);
                 } else {
-                    return $this->render('create', [
-                                'model' => $model,
-                    ]);
+                    return $this->render('create', ['model' => $model ]);
                 }
             }
 
@@ -101,11 +100,10 @@ class BackendController extends Controller {
             public function actionUpdate($id) {
                 $model = $this->findModel($id);
                 if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                    return $this->redirect(['index', 'class' => $model->class]);
+//                    return $this->redirect(['index', 'class' => $model->class]);
+                    return $this->render('update', [ 'model' => $model ]);
                 } else {
-                    return $this->render('update', [
-                                'model' => $model,
-                    ]);
+                    return $this->render('update', ['model' => $model ]);
                 }
             }
 
@@ -116,7 +114,7 @@ class BackendController extends Controller {
              * @return mixed
              */
             public function actionDelete($id) {
-                $model = (new Content)->findModel($id);
+                $model = $this->findModel($id);
                 $class = $model->class;
                 $model->delete();
 
@@ -142,7 +140,7 @@ class BackendController extends Controller {
              * @throws NotFoundHttpException if the model cannot be found
              */
             private function findModel($id) {
-                if (($model = $this->findOne($id)) !== null) {
+                if (($model = Content::findOne($id)) !== null) {
                     return $model;
                 } else {
                     throw new NotFoundHttpException('The requested page does not exist.');

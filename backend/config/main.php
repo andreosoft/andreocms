@@ -14,8 +14,8 @@ return [
         'calendar' => [
             'class' => 'common\modules\calendar\Module',
         ],
-        'admin' => [
-            'class' => 'common\modules\admin\Module',
+        'main' => [
+            'class' => 'common\modules\main\Module',
         ],
         'users' => [
             'class' => 'common\modules\users\Module',
@@ -55,7 +55,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'ma/backend/error',
+            'errorAction' => 'main/backend/error',
         ],
         'view' => [
             'theme' => 'common\themes\admin\Theme'

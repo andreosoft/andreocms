@@ -11,7 +11,7 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $alias
- * @property string $title
+ * @property string $template
  * @property string $introtext
  * @property string $content
  * @property integer $views
@@ -60,7 +60,7 @@ class Content extends \yii\db\ActiveRecord {
             ['template', 'string', 'max' => 255],
             [['seo_description', 'seo_keyword'], 'string'],
             [['seo_url', 'seo_title', 'seo_keyword'], 'string', 'max' => 255],
-            [['title', 'introtext', 'content', 'tag', 'image'], 'string'],
+            [['introtext', 'content', 'tag', 'image'], 'string'],
             [['parent', 'isparent'], 'integer'],
             [['views', 'like', 'rating', 'rating_num', 'status', 'publishedby', 'createdby', 'updatedby'], 'integer'],
             [['publishedon', 'createdon', 'updatedon'], 'safe'],

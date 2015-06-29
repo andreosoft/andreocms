@@ -5,13 +5,13 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-shtorka',
+    'id' => 'app-pxdesign',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'defaultRoute' => 'site/default/index',
+    'defaultRoute' => 'main/frontend/index',
     'modules' => [
-        'site' => [
-            'class' => 'common\modules\site\Module',
+        'main' => [
+            'class' => 'common\modules\main\Module',
         ],
         'users' => [
             'class' => 'common\modules\users\Module',
@@ -34,7 +34,7 @@ return [
     ],
     'components' => [
         'view' => [
-            'theme' => 'common\themes\shtorka\Theme',
+            'theme' => 'common\themes\pxdesign\Theme',
         ],
         'user' => [
             'identityClass' => 'common\modules\users\models\User',
@@ -65,39 +65,44 @@ return [
             'suffix' => '/',
             'rules' => [
                 // site
-                '' => 'site/default/index',
+                '' => 'main/frontend/index',
                 // content                    
                 [
                     'suffix' => '.html',
-                    'pattern' => '<view>/<url>',
-                    'route' => 'content/site/view-by-url',
+                    'pattern' => '<url>',
+                    'route' => 'content/frontend/view-by-url',
                 ],
                 [
+                    'suffix' => '.html',
+                    'pattern' => '<class>/<url>',
+                    'route' => 'content/frontend/view-class-by-url',
+                ],                
+                [
                     'pattern' => '<class>',
-                    'route' => 'content/site/index',
+                    'route' => 'content/frontend/index',
                 ],
                 // catalog
                 [
                     'pattern' => 'catalog/index/',
-                    'route' => 'catalog/site/index',
+                    'route' => 'catalog/frontend/index',
                 ],
                 [
                     'suffix' => '.html',
                     'pattern' => 'catalog/view/<id:\d+>',
-                    'route' => 'catalog/site/view',
+                    'route' => 'catalog/frontend/view',
                 ],
                 [
                     'suffix' => '.html',
                     'pattern' => 'catalog/view/<url:\w.+>',
-                    'route' => 'catalog/site/view-by-url',
+                    'route' => 'catalog/frontend/view-by-url',
                 ],
-                'catalog/search' => 'catalog/site/search',
-                'callback/create' => 'callback/site/create',
-                'callback/view' => 'callback/site/view',
+                'catalog/search' => 'catalog/frontend/search',
+                'callback/create' => 'callback/frontend/create',
+                'callback/view' => 'callback/frontend/view',
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/default/error',
+            'errorAction' => 'main/frontend/error',
         ],
         'i18n' => [
             'translations' => [

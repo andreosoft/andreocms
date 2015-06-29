@@ -59,6 +59,15 @@ class FrontendController extends Controller {
         ]);
     }
     
+    public function actionViewClassByUrl($url, $class, $view = 'view')
+    {
+        $model = $this->findModel(['seo_url' => $url, 'class' => $class]);
+        $view = $model->template != '' ? $model->template : $class;
+        return $this->render($view, [
+            'model' => $model,
+        ]);
+    }
+    
     protected function findModel($id)
     {
         if (($model = Content::findOne($id)) !== null) {

@@ -16,12 +16,15 @@ class ThemeAsset extends AssetBundle
 
  
     public $css = [
+        'css/bootstrap/bootstrap.min.css',
+        'css/bootstrap/bootstrap-responsive.min.css',
         'font/fontello.css',
         'css/style.css',
         'css/media-queries.css',
     ];
     
     public $js = [
+        'js/bootstrap/bootstrap.min.js',
         'js/modernizr.custom.js',
         'js/nav/jquery.scrollTo.js',
         'js/nav/jquery.nav.js',
@@ -35,7 +38,5 @@ class ThemeAsset extends AssetBundle
 
     public $depends = [
         'yii\web\JqueryAsset',
-        'yii\bootstrap\BootstrapAsset',
-        'yii\bootstrap\BootstrapPluginAsset'
     ];
 }

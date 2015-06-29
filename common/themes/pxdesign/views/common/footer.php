@@ -30,9 +30,9 @@ use yii\helpers\Url;
                 <div class="span6">
                     <h2>Ответы на вопросы</h2>
                     <ul class="faq">
-                        <li><a href="<?= Url::to(['/content/site/view-by-url', 'url' => 'faq'])?>"> <i class="icon-lifebuoy"></i> Что такое поисковая оптимизация?</a></li>
-                        <li><a href="<?= Url::to(['/content/site/view-by-url', 'url' => 'faq'])?>"> <i class="icon-lifebuoy"></i> Вы работаете по договору?</a></li>
-                        <li><a href="<?= Url::to(['/content/site/view-by-url', 'url' => 'faq'])?>"> <i class="icon-lifebuoy"></i> Какие гарантии Вы можете дать?</a></li>
+                        <li><a href="<?= Url::to(['/content/frontend/view-by-url', 'url' => 'ОТВЕТЫ_НА_ВОПРОСЫ', '#' => 'optim'])?>"> <i class="icon-lifebuoy"></i> Что такое поисковая оптимизация?</a></li>
+                        <li><a href="<?= Url::to(['/content/frontend/view-by-url', 'url' => 'ОТВЕТЫ_НА_ВОПРОСЫ', '#' => 'dogovor'])?>"> <i class="icon-lifebuoy"></i> Вы работаете по договору?</a></li>
+                        <li><a href="<?= Url::to(['/content/frontend/view-by-url', 'url' => 'ОТВЕТЫ_НА_ВОПРОСЫ', '#' => 'garantii'])?>"> <i class="icon-lifebuoy"></i> Какие гарантии Вы можете дать?</a></li>
                     </ul>
                 </div>
                 <div class="span6 fitem">

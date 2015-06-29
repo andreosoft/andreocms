@@ -13,7 +13,7 @@ ThemeAsset::register($this);
     <body> 
         <?php $this->beginBody(); ?>
         
-            <?= $this->render('//common/header') ?>
+            <?= $this->render('//common/header-index') ?>
 
             <?= $content ?>
 

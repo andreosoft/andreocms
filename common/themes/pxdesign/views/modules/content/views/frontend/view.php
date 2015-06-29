@@ -29,7 +29,7 @@ $this->registerMetaTag([
 
             <div class="divider"></div>
             <div class="row-fluid text-center title">
-                <h1><?= $model->title?>></h1>
+                <h1><?= $model->name?></h1>
             </div>
             <div class="row-fluid text-left">
                 <p style="color:#23313a; margin-bottom: 15px;"><?= $model->content?></p>

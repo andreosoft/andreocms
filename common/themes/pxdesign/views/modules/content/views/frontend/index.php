@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
 use andreosoft\image\Image;
-use common\modules\content\models\Content;
+use common\modules\content\models\frontend\Content;
 
 $this->title = 'Наши работы';
 
@@ -35,7 +35,7 @@ $this->registerMetaTag([
                 <h1><?= $this->title?></h1>
                 <?php foreach ($elements as $model): ?>
                 <div class="span4" style="margin-left:0;">
-                    <?= Html::a(Html::img(Image::thumb($model->image, 200, 500)).'<div style="font-size: 14px;">'.$model->name.'</div>', ['view-by-url', 'url' => $model->seo_url]) ?>
+                    <?= Html::a(Html::img(Image::thumb($model->image, 200, 500)).'<div style="font-size: 14px;">'.$model->name.'</div>', ['view-class-by-url', 'url' => $model->seo_url, 'class' => 'portfolio']) ?>
                 </div>
                 <?php endforeach; ?>
             </div>

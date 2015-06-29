@@ -34,7 +34,7 @@ use andreosoft\image\Image;
                             <div class="pull-left">
                                 <?=
                                 Html::a(
-                                        'Profile', ['/users/backendprofile/view', 'id' => Yii::$app->user->identity->profile->id], ['class' => 'btn btn-default btn-flat']
+                                        'Profile', ['/users/backend/update', 'id' => Yii::$app->user->identity->profile->id], ['class' => 'btn btn-default btn-flat']
                                 )
                                 ?>
                             </div>

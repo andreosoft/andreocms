@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define Charset -->
+    <meta charset="utf-8"/>
+
+    <title>PxDesign - разработка сайтов в Уфе.</title>
+
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Description and Author -->
+    <meta name="description" content="">
+    <meta name="author" content="PxDesign">
+
+    <!-- Stylesheet
+    ===================================================================================================  -->
+	<link type="ico" rel="shortcut icon" href="favicon.ico">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    
+    <!-- Font icons -->
+    <link href="font/fontello.css" rel="stylesheet" >
+    <!--[if IE 7]>
+    <link href="font/fontello-ie7.css" rel="stylesheet" ><![endif]-->
+
+	<!-- Custom Template Styles -->
+    <link href="css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Media Queries -->
+    <link href="css/media-queries.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="images/favicon.html">
+
+    <script src="js/modernizr.custom.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- Main Menu -->
+    <nav class="navbar navbar-fixed-top animated fadeInDown delay1">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="wrapp">
+        
+                    <!--Mobile Main Menu-->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--Mobile Main Menu-->
+
+                    <!--Desktop Main Menu-->
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                              <li><a href="#">Главная</a></li>
+                              <!-- <li><a href="#">О Нас</a></li> -->
+                              <li><a href="#">Наши услуги</a></li>
+                              <li><a href="#">Портфолио</a></li>
+							  <li><a href="#">Контакты</a></li>
+                              <li><a data-toggle="modal" href="#myModal">Заказать расчет</a></li>
+                        </ul>
+                     </div>
+                     <!--End Desktop Main Menu-->
+
+                 </div>    
+            </div><!--/.container -->
+        </div><!--/.nav-inner -->
+    </nav>
+    <!-- End Main Menu -->
+
+    <!-- Contact Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Оставить заявку на расчет рекламы.</h3>
+        </div>
+        <div class="modal-body">
+            <!-- Form -->
+            <form id="form" class="form_online" action="http://context.kg/send.php">
+                <label class="no">Name</label>
+                <input type="text" placeholder="Как к Вам обращаться?" name="name">
+                <label class="no">Email</label>
+                <input type="email" placeholder="Ваш e-mail." name="email" required="">
+                <label class="no">Message</label>
+                <textarea placeholder="Адрес Вашего сайта. Если нет сайта, то коротко опишите Ваш вид деятельности. Мы подготовим для Вас коммерческое предложение и вышлем на указанный Вами e-mail." name="message" required=""></textarea>
+                <input type="submit" name="Submit" value="Отправить" class="send">
+            </form>
+            <!-- Form -->
+        </div>
+        <div class="modal-footer"></div>
+    </div>
+    
+
+
+
+    <!-- Header Section -->
+    <header class="" id="menu-home">
+        <div class="container">
+        	<div class="wrapp">
+	            <div class="row-fluid text-center logo animated fadeInUp delay2">
+	                <a href="http://www.pxdesign.ru"><img alt="logo" src="img/logo.png"></a>  
+	            </div>    
+            </div>   
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+
+    <!-- Features Section -->
+    <section class="features generic animated fadeInUp delay3" id="menu-features">  
+    	<div class="container">
+    		<div class="wrapp">
+
+		        <!-- Title -->
+		        <div class="row-fluid text-center title">
+		            <div class="divider"></div>
+		            <h1>Разработка сайтов</h1>
+		            <p>Мы разрабатываем легкие, быстрые, сайты с учетом всех современных требований и тенденций. Наши сайты одинаково хорошо работают как на больших десктопных дисплеях, так и на мобильных устройствах. Удобство управления всегда продумывается на самом начальном этапе разработки. Мы не используем популярные CMS, а работаем на по-настоящему мощном фреймворке Yii2, который считается эталоном производительности. Среди наших собственных разработок имеются решения, которые позволяют быстро создавать сайты различной сложности, от информационных сайтов компаний до больших интернет магазинов и порталов с элеменами социальных сетей.</p>
+		        </div>
+		        <!-- End Title -->
+
+		        <div class="row-fluid">
+		            <div class="span6">
+		                <div class="item">
+		                    <h2 class="pull-left"> <img src="img/features-screen.png" alt="icon" class="pull-left">  Разработка сайтов</h2>
+		                    <p>Разработка красивых и быстрых сайтов с учетом всех ваших пожеланий. В итоге Вы получаете индивидуально разработанный сайт, соответствующий всем Вашим ожиданиям и требованиям. <a href="#">Подробнее...</a></p></p>
+		                </div>
+		                <div class="item">
+		                    <h2 class="pull-left"> <img src="img/features-showcase.png" alt="icon" class="pull-left">  Поисковая оптимизация</h2>
+		                    <p>Наша задача - сделать так, чтобы поисковики высоко оценивали Ваш сайт и правильно определяли ключевые слова для каждой страницы сайта. Высокие позиции в поиске обеспечивают приток потенциально заинтересованных посетителей. <a href="#">Подробнее...</a></p></p> 
+		                </div>        
+		            </div>
+		   
+		            <div class="span6">
+		                <div class="item">
+		                    <h2 class="pull-left"> <img src="img/features-screen.png" alt="icon" class="pull-left"> Контекстная реклама</h2>
+		                    <p>Контекстная реклама - современная рекламная технология, которая позволяет показывать рекламу человеку в зависимости от его интересов. По эффективности в разы превосходит классические оффлайн площадки. <a href="#">Подробнее...</a></p> 
+		                </div>
+		                <div class="item">
+		                    <h2 class="pull-left"> <img src="img/features-support.png" alt="icon" class="pull-left"> SMO и SMM</h2>
+		                    <p>Социальные сети - это такой же канал маркетинговых коммуникаций, как реклама на ТВ или участие в профильной выставке. Используя социальные сети, можно эффективно решать маркетинговые задачи и в разы увеличивать эффективность рекламы. <a href="#">Подробнее...</a></p></p> 
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+    </section>
+    <!-- End Features Section -->
+
+
+    <!-- Information Section -->
+    <section class="information" id="menu-info">
+    	<div class="container">
+    		<div class="wrapp">
+
+	    		<!-- Title -->
+		        <div class="row-fluid text-left title" style="margin-bottom:40px;">
+		            <div class="divider"></div>
+		            <h1 style="text-align:center;">Как мы работаем?</h1>
+		            <p>1. Мы создаем сайты с индивидуальным дизайном. Мы не используем бесплатные шаблоны, скачанные в интернете. Это однозначно повышает стоимость работ, но результат стоит того.</p>
+					<p>2. Мы придерживаемся политики минимизации расходов в продвижении и оптимизации сайтов, при том достигаем отличных результатов. Если при разработке сайта каких-то расходов можно избежать, мы обязательно Вам об этом скажем.</p>
+					<p>3. Мы не считаем, что клиент всегда прав. Если мы, как профессионалы, увидим, что что-то отрицательно повлияет на сам сайт или его развитие в дальнейшем, мы открыто на это укажем.</p>
+					<p>4. Мы считаем, что каждый сайт должен адекватно отображаться на мобильных устройствах, даже если клиент об этом не попросит. И это правильно.</p>
+					<p>5. Ни один проект не передается клиенту до тех пор, пока не будет проведен базовый перечень работ по поисковой оптимизации. Сайт должен не просто существовать, он должен работать.</p>
+					<p>6. Работаем так, чтобы нам самим было приятно показать другим, что мы сделали.</p>
+		        </div>
+		        <!-- End Title -->
+
+    		</div>
+    	</div>
+    </section>
+    <!-- End Information Section -->
+
+
+    
+	
+    <!-- Pricing Tables Section -->
+    <section class="pricing generic" id="menu-pricing" style="padding-top: 10px;">
+        <div class="container">
+            <div class="wrapp">    
+                <!-- Title -->
+                <div class="row-fluid text-center title">
+                    <div class="divider"></div>
+                    <h1>Почему с нами выгодно работать?</h1>
+                    <p>Для наших клиентов мы оказываем услуги технической поддержки. Вы всегда можете доверить нам решение любых вопросов связанных с поддержкой, наполнением и развитием вашего веб-проекта. Мы всегда ищем и стараемся сразу внедрять не только новые технологии веб разработки, но и возможности продвижения сайтов в каждом отдельном регионе. И что не мало важно для клиента, мы не завышаем цены. Ниже приведены примеры базовых цен.</p>
+                </div>
+                <!-- End Title -->
+
+                <div class="row-fluid" style="padding-top:30px;">
+                    <div class="three-tables">
+                        
+                        <div class="pricing-table">
+                            <div class="t-one">
+                                <h3>Сайт визитка</h3>
+                                <h4><span class="time">от</span> 25 000 <span class="time">рублей</span></h4>
+                                <ul>
+                                    <li>Адаптивная верстка сайта</li>
+									<li>Адаптивная панель управления</li>
+                                    <li>Пакет SEO оптимизации</li>
+                                    <li>Установка онлайн консультанта </li>
+									<li>Контекстная реклама в подарок </li>
+                                    <li class="sign-up"><a data-toggle="modal" href="#myModal" class="btn large">Заказать <img src="img/buynow-icon.png" alt="buy now icon"></a></li>
+                                </ul>
+                            </div>
+                        </div>​
+
+                        <div class="pricing-table featured">
+                            <div class="t-two">
+                                <h3>Сайт компании</h3>
+                                <h4><span class="time">от</span> 30 000 <span class="time">рублей</span></h4>
+                                <ul>
+                                    <li>Адаптивная верстка сайта</li>
+									<li>Адаптивная панель управления</li>
+                                    <li>Пакет SEO оптимизации</li>
+                                    <li>Установка онлайн консультанта </li>
+									<li>Контекстная реклама в подарок </li>
+                                    <li class="sign-up"><a data-toggle="modal" href="#myModal" class="btn large">Заказать <img src="img/buynow-icon-feature.png" alt="buy now icon"></a></li>
+                                </ul>
+                            </div>
+                        </div>​
+
+                        <div class="pricing-table">
+                            <div class="t-three">
+                                <h3>Интернет магазин</h3>
+                                <h4><span class="time">от</span> 45 000 <span class="time">рублей</span></h4>
+                                <ul>
+                                    <li>Адаптивная верстка сайта</li>
+									<li>Адаптивная панель управления</li>
+                                    <li>Пакет SEO оптимизации</li>
+                                    <li>Установка онлайн консультанта </li>
+									<li>Контекстная реклама в подарок </li>
+                                    <li class="sign-up"><a data-toggle="modal" href="#myModal" class="btn large">Заказать <img src="img/buynow-icon.png" alt="buy now icon"></a></li>
+                                </ul>
+                            </div>
+                        </div>​ 
+
+                    </div> 
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Pricing Tables Section -->
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="wrapp">
+
+                <div class="row-fluid">
+                    <div class="span6 fitem">
+                        <h2>ООО "Медиасистемы"</h2>
+                        
+                        <p>Полный комплекс рекламы в интернете. Разработка сайтов и интернет магазинов с индивидуальным дизайном, либо на базе коммерческих (платных) шаблонов. Разработка лэндинг страниц.</p>
+                    </div>
+                    <div class="span6 fitem">
+                        <h2>Наши контакты</h2>
+                        <ul class="contact">
+                            <li class="mail">info@pxdesign.ru</li>
+                            <li class="tel"><a href="tel:+79649603257"><span style="font-size: 20px;">+7 (964) 960 3257</span></a></li>
+                            <li class="address">Россия, г. Уфа, ул. Кольцевая 174</li>
+                        </ul>
+                        <!-- <a id="openmap" href="http://maps.google.com/?output=embed&amp;f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=London+Eye,+County+Hall,+Westminster+Bridge+Road,+London,+United+Kingdom&amp;hl=lv&amp;ll=51.504155,-0.117749&amp;spn=0.00571,0.016512&amp;sll=56.879635,24.603189&amp;sspn=10.280244,33.815918&amp;vpsrc=8&amp;hq=London+Eye&amp;radius=15000&amp;t=h&amp;z=17">
+                            <img src="img/map-icon.png" alt="image" class="map"> -->
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row-fluid fitem">
+                    <div class="span6">
+                        <h2>Ответы на вопросы</h2>
+                        <ul class="faq">
+                            <li><a href="#"> <i class="icon-lifebuoy"></i> Что такое поисковая оптимизация?</a></li>
+                            <li><a href="#"> <i class="icon-lifebuoy"></i> Вы работаете по договору?</a></li>
+                            <li><a href="#"> <i class="icon-lifebuoy"></i> Какие гарантии Вы можете дать?</a></li>
+                        </ul>
+                    </div>
+                    <div class="span6 fitem">
+                        <h2>Платежная информация</h2>
+                        <p>Мы принимаем оплату наличными, перечислением на расчетный счет, электронными платежными системами Webmoney и Яндекс Деньги.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+
+    <!-- Copyright Section -->
+    <section class="copyright">
+        <div class="container">
+            <div class="wrapp">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h6>2015 ООО "Медиасистемы".<br /> Разработка и продвижение сайтов. Контекстная реклама.</h6>
+                    </div>
+                    <ul class="social span6">
+                        <li title="Twitter" class="tooltip_hover"><a href="https://twitter.com/PxSeo" target="_blank"><i class="icon-twitter"></i></a></li>
+                        <li title="Facebook" class="tooltip_hover"><a href="https://www.facebook.com/www.PxDesign.ru" target="_blank"><i class="icon-facebook"></i></a></li>
+                        <!-- <li title="Linkedin" class="tooltip_hover"><a href="#"><i class="icon-linkedin"></i></a></li>
+                        <li title="Dribbble" class="tooltip_hover"><a href="#"><i class="icon-dribbble"></i></a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Copyright Section -->
+
+
+
+
+
+    <a href="#" class="scrollup"><i class="icon-up-open"></i></a>      
+	    
+
+
+	<!-- ======================= JQuery libs =========================== -->
+		<script type="text/javascript" src="js/jquery.1.8.2.js"></script>
+        
+        <!-- Bootstrap -->
+        <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+        <!--Scroll To-->         
+        <script src="js/nav/jquery.scrollTo.js"></script> 
+        <script src="js/nav/jquery.nav.js"></script> 
+    
+        <!--Retina Support-->
+        <script src="js/retina/retina.js" type="text/javascript"></script>
+
+        <!-- Fancybox lightbox -->
+        <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+        <!-- Video Responsive-->
+        <script src="js/jquery.fitvids.min.js" type="text/javascript"></script>
+        <script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+
+        <!-- Custom -->
+        <script type="text/javascript" src="js/jquery-func.js"></script>
+	<!-- ======================= End JQuery libs ======================= -->
+	    
+<script>
+$(document).ready(function() {
+    $('#form').submit(function(event) {
+	event.preventDefault();
+	$.post( $(this).attr('action'), $(this).serialize() );
+	$('#myModal').modal('hide');
+    });
+});
+</script>
+
+
+</body>
+</html>

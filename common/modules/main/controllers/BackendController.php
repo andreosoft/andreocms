@@ -1,12 +1,12 @@
 <?php
 
-namespace common\modules\admin\controllers;
+namespace common\modules\main\controllers;
 
 use yii\web\Controller;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
-class DefaultController extends Controller
+class BackendController extends Controller
 {
     public function behaviors()
     {

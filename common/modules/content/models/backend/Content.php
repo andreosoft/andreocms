@@ -9,7 +9,7 @@ class Content extends \common\modules\content\models\Content {
     public function beforeSave($insert) {
         
         if ($this->seo_url == '') {
-            $this->seo_url = $this->name;
+            $this->seo_url = str_replace(' ', '_', $this->name);
         }
 
         if ($this->status == Content::STATUS_PUBLISHED) {

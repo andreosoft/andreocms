@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'Shtorka',
+    'name' => 'PxDesign',
     'timeZone' => 'Europe/Moscow',
     'language' => 'ru-RU',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
@@ -11,7 +11,7 @@ return [
         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=shtorka',
+            'dsn' => 'mysql:host=localhost;dbname=acms',
             'username' => 'root',
             'password' => '739618',
             'charset' => 'utf8',
