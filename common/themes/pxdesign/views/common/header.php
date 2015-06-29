@@ -20,10 +20,10 @@ use yii\helpers\Html;
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li><?= Html::a('Главная', \Yii::$app->homeUrl)?></li>
-                        <!-- <li><a href="#">О Нас</a></li> -->
-                        <li><?= Html::a('Наши услуги',['/content/site/view-by-url', 'url' => 'Наши+услуги'])?></li>
-                        <li><?= Html::a('Портфолио',['/content/site/view-by-url', 'url' => 'Портфолио'])?></a></li>
-                        <li><?= Html::a('Контакты',['/content/site/view-by-url', 'url' => 'Контакты'])?></li>
+                        <!--<li><a href="#">О Нас</a></li> -->
+                        <li><?= Html::a('Наши услуги',['/content/frontend/view-by-url', 'url' => 'Наши_услуги'])?></li>
+                        <li><?= Html::a('Портфолио',['/content/frontend/index', 'class' => 'portfolio'])?></a></li>
+                        <li><?= Html::a('Контакты',['/content/frontend/view-by-url', 'url' => 'Контакты'])?></li>
                         <li><a data-toggle="modal" href="#myModal">Заказать расчет</a></li>
                     </ul>
                 </div>
@@ -45,7 +45,7 @@ use yii\helpers\Html;
         <!-- Form -->
         <form id="form" class="form_online" action="http://context.kg/send.php">
             <label class="no">Name</label>
-            <input type="text" placeholder="Как к Вам обращаться?" name="name">
+            <input type="text" placeholder="Как к Вам обращаться?" name="name" required="">
             <label class="no">Email</label>
             <input type="email" placeholder="Ваш e-mail." name="email" required="">
             <label class="no">Message</label>
@@ -56,15 +56,3 @@ use yii\helpers\Html;
     </div>
     <div class="modal-footer"></div>
 </div>
-
-<!-- Header Section -->
-<header class="" id="menu-home">
-    <div class="container">
-        <div class="wrapp">
-            <div class="row-fluid text-center logo animated fadeInUp delay2">
-                <a href="<?= \Yii::$app->homeUrl?>"><img alt="logo" src="<?= \Yii::$app->assetManager->publish('@common/themes/pxdesign/assets/img/logo.png')[1] ?>"></a>  
-            </div>    
-        </div>   
-    </div>
-</header>
-<!-- End Header Section -->
